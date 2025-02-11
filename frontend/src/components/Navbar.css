@@ -1,0 +1,48 @@
+/* This is the CSS file for the Navbar component */
+
+/* Navbar menu button */
+.nav-menu-line {
+    background: linear-gradient(90deg, #00fff6, #ff00f6);
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(0, 255, 246, 0.8), 0 0 16px rgba(255, 0, 246, 0.8);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Offset the lines horizontally */
+.nav-menu-line:nth-child(1) {
+    width: 60%;
+    margin-left: 0%;
+}
+
+.nav-menu-line:nth-child(2) {
+    width: 80%;
+    margin-left: 0%;
+}
+
+.nav-menu-line:nth-child(3) {
+    width: 100%;
+    margin-left: 0%;
+}
+
+/* Add hover effects for glow */
+#nav-menu-btn:hover .nav-menu-line {
+    box-shadow: 0 0 12px rgba(0, 255, 246, 1), 0 0 24px rgba(255, 0, 246, 1);
+}
+
+/* Navbar menu button animation */
+#nav-menu-btn.open-menu .nav-menu-line:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+    margin-left: 0;
+    width: 100%;
+}
+
+#nav-menu-btn.open-menu .nav-menu-line:nth-child(2) {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+#nav-menu-btn.open-menu .nav-menu-line:nth-child(3) {
+    margin-left: 0;
+    transform: translateY(-14px) rotate(-45deg);
+    width: 100%;
+}
