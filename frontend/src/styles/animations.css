@@ -1,0 +1,28 @@
+/* Border Glow Animation */
+@keyframes border-glow {
+    0% { border-image-source: linear-gradient(90deg, var(--color-primary-cyan-900), var(--color-primary-magenta-900), var(--color-primary-cyan-900)); }
+    50% { border-image-source: linear-gradient(90deg, var(--color-primary-magenta-900), var(--color-primary-cyan-900), var(--color-primary-magenta-900)); }
+    100% { border-image-source: linear-gradient(90deg, var(--color-primary-cyan-900), var(--color-primary-magenta-900), var(--color-primary-cyan-900)); }
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+    0% { text-shadow: 2px 2px var(--color-primary-purple-700); }
+    25% { text-shadow: -2px -2px var(--color-primary-magenta-900); }
+    50% { text-shadow: 2px -2px var(--color-primary-purple-700); }
+    75% { text-shadow: -2px 2px var(--color-primary-magenta-900); }
+    100% { text-shadow: 2px 2px var(--color-primary-purple-700); }
+}
+
+/* Glow Pulse Animation */
+@keyframes cyberpunk-glow {
+    0% {
+        box-shadow: 0 0 8px rgba(0, 255, 246, 0.8), 0 0 16px rgba(255, 0, 246, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 12px rgba(0, 255, 246, 1), 0 0 24px rgba(255, 0, 246, 1);
+    }
+    100% {
+        box-shadow: 0 0 8px rgba(0, 255, 246, 0.8), 0 0 16px rgba(255, 0, 246, 0.8);
+    }
+}
