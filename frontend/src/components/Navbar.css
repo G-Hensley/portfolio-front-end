@@ -49,7 +49,7 @@
 
 /* Navbar menu styles for larger screens */
 .nav-list {
-    animation: border-glow 5s linear infinite, cyberpunk-glow 2s infinite alternate;
+    animation: border-glow 5s linear infinite, cyberpunk-glow 5s infinite alternate;
     border: 2px solid;
     border-image-slice: 1;
     border-image-source: linear-gradient(90deg, var(--color-primary-cyan-900), var(--color-primary-magenta-900), var(--color-primary-cyan-900));

@@ -24,7 +24,7 @@ export default function Navbar() {
             {/* Nav Menu Links */}
             <ul id="nav-list" className={`nav-list absolute bg-purple flex flex-col gap-12 
                 items-center justify-center p-8 sm:py-2 sm:px-4 sm:flex-row sm:top-4 h1-ff 
-                desktop-h1 top-24 text-mobile-body sm:text-desktop-body w-full sm:w-auto 
+                desktop-h1 top-24 text-mobile-lg-body sm:text-desktop-body w-full sm:w-auto 
                 text-primary-cyan-900 font-body-ff duration-600 sm:translate-0 
                 ${menuOpen ? "" : "transform translate-x-full"} ${menuOpen ? "opacity-100" : "opacity-0"} 
                 sm:opacity-100`}>

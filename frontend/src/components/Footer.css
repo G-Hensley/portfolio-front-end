@@ -1,0 +1,14 @@
+/* Footer container styles */
+footer {
+    animation: border-glow 5s linear infinite, cyberpunk-glow 5s infinite alternate;
+    border-top: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, var(--color-primary-cyan-900), var(--color-primary-magenta-900), var(--color-primary-cyan-900));
+}
+
+/* Footer Section Styles */
+.footer-title {
+    font-family: var(--font-h2-ff);
+    text-align: center;
+    transition: text-shadow 0.3s ease;
+}
