@@ -51,6 +51,8 @@
     --color-glitch-gradient: linear-gradient(90deg, #FF00FF 0%, #00FFFF 50%, #FF00FF 100%);
     --color-holographic-gradient: linear-gradient(90deg, #00FFFF 0%, #9400D3 100%);
     --color-sunset-gradient: linear-gradient(90deg, #FF007F 0%, #FF4500 50%, #FFD700 100%);
+
+    --color-text-shadow: 0 0 8px rgba(0, 255, 255, 0.8), 0 0 16px rgba(255, 0, 255, 0.8);
     /* Font Families */
     --font-h1-ff: h1-font;
     --font-h2-ff: h2-font;
@@ -64,4 +66,8 @@
     --text-mobile-h2: 2.25rem;
     --text-mobile-lg-body: 1.35rem;
     --text-mobile-body: 1.125rem;
+}
+
+textarea {
+    resize: none;
 }

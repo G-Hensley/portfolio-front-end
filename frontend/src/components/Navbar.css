@@ -60,11 +60,12 @@
 .nav-link {
     position: relative;
     text-shadow: 0 0 8px rgba(0, 255, 255, 0.8), 0 0 16px rgba(255, 0, 255, 0.8);
-    transition: text-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-link:hover {
     animation: glitch 0.5s linear infinite;
+    color: var(--color-primary-cyan-500);
 }
 
 .nav-link::after {
