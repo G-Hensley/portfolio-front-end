@@ -20,6 +20,10 @@ footer {
     text-shadow: var(--color-text-shadow);
 }
 
+footer section {
+    flex: 1;
+}
+
 /* Footer Section Styles */
 .footer-title {
     font-family: var(--font-h2-ff);
@@ -37,9 +41,9 @@ footer {
     color: var(--color-primary-cyan-900);
     font-family: var(--font-body-ff);
     margin: 0.5rem 0;
-    min-width: 280px;
     padding: 0.5rem;
     transition: all 0.3s ease;
+    min-width: 280px;
 }
 
 .contact-input:focus {
@@ -49,23 +53,29 @@ footer {
 }
 
 /* Styles for the social media icons */
-.social-link {
+.icon-link {
     filter: drop-shadow(0 0 16px rgba(255, 0, 255, 0.822));
     transition: all 0.2s ease;
 }
 
-.social-link:hover {
+.icon-link:hover {
     color: var(--color-primary-cyan-500);
     scale: 1.2;
 }
 
-.social-link:active {
+.icon-link:active {
     color: var(--color-primary-cyan-700);
     scale: 0.9;
 }
 
-.social-icon {
+.icon {
     filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.795));
+}
+
+/* Contact Section Styles */
+#contact-message {
+    height: 4.5rem;
+    width: 100%;
 }
 
 #contact-btn {
@@ -115,7 +125,7 @@ footer {
     background-color: var(--color-purple);
     bottom: 0;
     border-radius: 25px 0;
-    content: 'Submit';
+    content: 'SUBMIT';
     height: 100%;
     left: 0;
     padding: 0.4rem;
