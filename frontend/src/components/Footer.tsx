@@ -1,4 +1,5 @@
 import './Footer.css';
+import ClickableIcon from './ClickableIcon';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact, faNode } from '@fortawesome/free-brands-svg-icons';
 import { GithubLogo, LinkedinLogo, XLogo } from '@phosphor-icons/react';
@@ -11,6 +12,24 @@ export default function Footer() {
     let date = new Date();
     let year = date.getFullYear();
 
+    const techStack = [
+        { icon: <FontAwesomeIcon icon={faReact} className="icon text-4xl md:text-5xl" />, link: "https://react.dev/", label: "React" },
+        { icon: <FontAwesomeIcon icon={faNode} className="icon text-4xl md:text-5xl" />, link: "https://nodejs.org/", label: "Node.js" },
+        { icon: <BiLogoPostgresql className="icon text-4xl md:text-5xl" />, link: "https://www.postgresql.org/", label: "PostgreSQL" },
+        { icon: <SiPrisma className="icon text-4xl md:text-5xl" />, link: "https://www.prisma.io/", label: "Prisma" },
+        { icon: <BiLogoTypescript className="icon text-4xl md:text-5xl" />, link: "https://www.typescriptlang.org/", label: "TypeScript" },
+        { icon: <BiLogoTailwindCss className="icon text-4xl md:text-5xl" />, link: "https://tailwindcss.com/", label: "Tailwind CSS" },
+        { icon: <BiLogoGraphql className="icon text-4xl md:text-5xl" />, link: "https://graphql.org/", label: "GraphQL" },
+        { icon: <BiLogoHeroku className="icon text-4xl md:text-5xl" />, link: "https://www.heroku.com/", label: "Heroku" },
+        { icon: <IoLogoVercel className="icon text-4xl md:text-5xl" />, link: "https://vercel.com/", label: "Vercel" },
+    ];
+
+    const socialIcons = [
+        { icon: <GithubLogo className='icon text-4xl md:text-5xl' />, link: "https://github.com/G-Hensley/", label: "GitHub" },
+        { icon: <LinkedinLogo className='icon text-4xl md:text-5xl' />, link: "https://linkedin.com/in/g-hensley/", label: "LinkedIn" },
+        { icon: <XLogo className='icon text-4xl md:text-5xl' />, link: "https://x.com/GavinHensleyDev", label: "X" }
+    ]
+
     return (
 
         <footer className='absolute bg-purple bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 py-6 pb-12 text-primary-cyan-900 w-full'>
@@ -20,41 +39,9 @@ export default function Footer() {
                 <h3 className="footer-title text-mobile-lg-body md:text-desktop-lg-body">Tech Stack</h3>
                 
                 <div className="icon-container flex gap-y-4 gap-x-8 flex-wrap 2xl:w-3/4 justify-center">
-                    <a target='_blank' href="https://react.dev/" className="icon-link h-fit">
-                        <FontAwesomeIcon className='icon text-4xl md:text-5xl' icon={faReact} />
-                    </a>
-
-                    <a target='_blank' href="https://react.dev/" className="icon-link h-fit">
-                        <FontAwesomeIcon className='icon text-4xl md:text-5xl' icon={faNode} />
-                    </a>
-
-                    <a target='_blank' href="https://react.dev/" className="icon-link h-fit">
-                        <BiLogoPostgresql className='icon text-4xl md:text-5xl'/>
-                    </a>
-
-                    <a target='_blank' href="https://react.dev/" className="icon-link h-fit">
-                        <SiPrisma  className='icon text-4xl md:text-5xl'/>
-                    </a>
-
-                    <a target='_blank' href="https://react.dev/" className="icon-link h-fit">
-                        <BiLogoTypescript className='icon text-4xl md:text-5xl'/>
-                    </a>
-
-                    <a target='_blank' href="https://react.dev/" className="icon-link h-fit">
-                        <BiLogoTailwindCss className='icon text-4xl md:text-5xl'/>
-                    </a>
-
-                    <a target='_blank' href="https://react.dev/" className="icon-link h-fit">
-                        <BiLogoGraphql className='icon text-4xl md:text-5xl'/>
-                    </a>
-
-                    <a target='_blank' href="https://react.dev/" className="icon-link h-fit">
-                        <BiLogoHeroku className='icon text-4xl md:text-5xl'/>
-                    </a>
-
-                    <a target='_blank' href="https://react.dev/" className="icon-link h-fit">
-                        <IoLogoVercel className='icon text-4xl md:text-5xl'/>
-                    </a>
+                    {techStack.map((tech, index) => (
+                        <ClickableIcon key={index} icon={tech.icon} link={tech.link} label={tech.label} />
+                    ))}
                 </div>
 
             </section>
@@ -81,7 +68,7 @@ export default function Footer() {
                             <textarea id="contact-message" className="contact-input" placeholder='Your Message Here...' rows={4} required/>
                         </div>
 
-                        <button id='contact-btn' type="submit" className="btn py-2 px-4 font-body-ff h-fit md:text-desktop-body">SUBMIT</button>
+                        <button onClick={(e) => e.preventDefault()} id='contact-btn' type="submit" className="btn py-2 px-4 font-body-ff h-fit md:text-desktop-body">SUBMIT</button>
                     </div>
                 </form>
 
@@ -92,15 +79,9 @@ export default function Footer() {
                 <h3 className="footer-title text-mobile-lg-body md:text-desktop-lg-body">Social</h3>
 
                 <div className="icon-container flex md:flex-col gap-y-4 gap-x-8 items-center 2xl:w-3/4">
-                    <a target='_blank' href="https://github.com/G-Hensley/" className="icon-link h-fit">
-                        <GithubLogo className='icon text-4xl md:text-5xl'/>
-                    </a>
-                    <a target='_blank' href="https://linkedin.com/in/g-hensley/" className="icon-link h-fit">
-                        <LinkedinLogo className='icon text-4xl md:text-5xl'/>
-                    </a>
-                    <a target='_blank' href="https://x.com/GavinHensleyDev" className="icon-link h-fit">
-                        <XLogo className='icon text-4xl md:text-5xl'/>
-                    </a>
+                    {socialIcons.map((tech, index) => (
+                        <ClickableIcon key={index} icon={tech.icon} link={tech.link} label={tech.label} />
+                    ))}
                 </div>
 
             </section>
