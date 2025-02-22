@@ -1,0 +1,118 @@
+#skills-section {
+    animation: border-glow 5s linear infinite, cyberpunk-glow 5s infinite alternate;
+    border-top: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(90deg, var(--color-primary-cyan-900), var(--color-primary-magenta-900), var(--color-primary-cyan-900));
+    scroll-snap-align: start;
+}
+
+#main-skills-container {
+    display: grid;
+    column-gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        'frontend backend tools'
+        'design design design';
+    row-gap: 4rem;
+}
+
+#front-end-container {
+    align-self: self-start;
+    height: auto;
+    grid-area: frontend;
+}
+
+#back-end-container {
+    grid-area: backend;
+}
+
+#tools-container {
+    grid-area: tools;
+}
+
+#design-container {
+    align-self: flex-start;
+    justify-self: center;
+    grid-area: design;
+}
+
+.secondary-container {
+    background-image: linear-gradient(90deg, var(--color-charcoal), var(--color-secondary-blue-500), var(--color-charcoal));
+    border-radius: 10px;
+    position: relative;
+}
+
+.secondary-container::after {
+    animation: rotate-border 8s linear infinite, skills-glow 5s infinite;
+    content: '';
+    border-radius: 12px;
+    filter: blur(18px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--angle), var(--color-primary-cyan-500), var(--color-primary-magenta-500));
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.container-title {
+    color: black;
+    text-shadow: 0 0 20px var(--color-primary-magenta-900);
+    -webkit-text-stroke: 1px var(--color-primary-magenta-900);
+}
+
+.skill-icon {
+    color: var(--color-primary-cyan-700);
+}
+
+.skill-icon {
+    filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.568));
+    transition: all 0.2s ease;
+}
+
+.skill-icon:hover {
+    color: var(--color-primary-cyan-500);
+    filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.623));
+    scale: 1.2;
+}
+
+.skill-icon:active {
+    color: var(--color-primary-cyan-700);
+    scale: 0.9;
+}
+
+@media screen and (max-width: 1536px) {
+    #main-skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            'frontend backend'
+            'tools design';
+    }
+
+    #design-container {
+        align-self: stretch;
+        justify-self: stretch;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    #main-skills-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+            'frontend'
+            'backend'
+            'tools'
+            'design';
+    }
+
+    #design-container {
+        align-self: flex-start;
+        justify-self: center;
+    }
+    
+}

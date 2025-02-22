@@ -1,0 +1,19 @@
+#homepage-wrapper {
+    animation: scale-in 0.5s linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.3s;
+    animation-iteration-count: 1;
+    opacity: 0;
+    transform-origin: center center;
+}
+
+@keyframes scale-in {
+    0% {
+        transform: scaleX(0) scaleY(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scaleX(1) scaleY(1);
+        opacity: 1;
+    }
+}

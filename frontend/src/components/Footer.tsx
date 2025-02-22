@@ -32,7 +32,7 @@ export default function Footer() {
 
     return (
 
-        <footer className='absolute bg-purple bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 py-6 pb-12 text-primary-cyan-900 w-full'>
+        <footer className='bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 py-6 relative pb-12 text-primary-cyan-900 w-full'>
 
             <section id='tech-stack-section' className='flex flex-col gap-2 items-center mx-4 md:mx-0 md:ml-4 2xl:w-1/3'>
 

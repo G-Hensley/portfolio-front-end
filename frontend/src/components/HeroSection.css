@@ -1,0 +1,109 @@
+main {
+    scroll-snap-align: end;
+}
+
+/* Resume Button Styles */
+.resume-btn {
+    background-image: linear-gradient(120deg, var(--color-charcoal), var(--color-secondary-blue-500), var(--color-charcoal));
+    border-radius: 25px 0;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    opacity: 1;
+    text-shadow: var(--color-text-shadow);
+    transition: all 0.3s ease;
+    top: 2rem;
+    transform-style: preserve-3d;
+}
+
+.resume-btn:hover {
+    scale: 1.2;
+}
+
+.resume-btn:active {
+    scale: 0.9;
+}
+
+.resume-btn:hover::after {
+    box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.815);
+    filter: blur(8px);
+}
+
+.resume-btn::after {
+    animation: rotate-border 6s linear infinite;
+    background-image: linear-gradient(
+        var(--angle), 
+        var(--color-primary-cyan-900), 
+        var(--color-primary-cyan-700),
+        var(--color-primary-magenta-700), 
+        var(--color-primary-magenta-900)
+    );
+    bottom: 0px;
+    border-radius: 25px 0;
+    content: '';
+    filter: blur(4px);
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    transition: all 0.3s ease;
+    width: 100%;
+    transform: translateZ(-5px);
+}
+
+.download-icon {
+    filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.795));
+}
+
+/* Heading Styles */
+h1 {
+    animation: h1-glow 5s linear infinite;
+    color: rgba(0, 0, 0, 0.747);
+    user-select: none;
+    -webkit-text-stroke: 2px var(--color-primary-magenta-900);
+    line-height: 3rem;
+}
+
+h2 {
+    animation: h2-glow 6s linear infinite;
+    color: rgba(0, 0, 0, 0.747);
+    user-select: none;
+    -webkit-text-stroke: 1px var(--color-primary-cyan-900);
+}
+
+.type-animation {
+    animation: h2-glow 10s linear infinite;
+    color: rgba(0, 0, 0, 0.747);
+    user-select: none;
+    -webkit-text-stroke: 1px var(--color-primary-cyan-900);
+}
+
+#avatar {
+    animation: cyber-punk-glow 5s linear infinite;
+    clip-path: polygon(50% 0, 100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+}
+
+#scroll-header {
+    animation: alt-text-glow 7s linear infinite;
+    color: rgba(0, 0, 0, 0.747);
+    user-select: none;
+    transition: all 0.3s ease;
+    -webkit-text-stroke: 1px var(--color-primary-magenta-900);
+}
+
+#scroll-header:hover {
+    scale: 1.1;
+    --webkit-text-stroke: 3px var(--color-primary-magenta-700);
+}
+
+#down-arrow {
+    filter: drop-shadow(0 0 8px var(--color-primary-magenta-900));
+    transition: scale 0.3s ease;
+}
+
+#down-arrow:hover {
+    color: var(--color-primary-magenta-700);
+    scale: 1.1;
+}
+
+#scroll-header:active, #down-arrow:active {
+    scale: 0.9;
+}

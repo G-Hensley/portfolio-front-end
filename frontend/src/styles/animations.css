@@ -26,3 +26,65 @@
         box-shadow: 0 0 8px rgba(0, 255, 246, 0.8), 0 0 16px rgba(255, 0, 246, 0.8);
     }
 }
+
+@keyframes h1-glow {
+    0% {
+        text-shadow:0 0 35px var(--color-primary-magenta-700), 0 0 80px var(--color-primary-purple-700);
+    }
+    50% {
+        text-shadow:0 0 5px var(--color-primary-magenta-700), 0 0 20px var(--color-primary-purple-700);
+    }
+    100% {
+        text-shadow:0 0 35px var(--color-primary-magenta-700), 0 0 80px var(--color-primary-purple-700);
+    }
+}
+
+@keyframes h2-glow {
+    0% {
+        text-shadow:0 0 35px var(--color-primary-cyan-700), 0 0 60px var(--color-primary-cyan-700);
+    }
+    50% {
+        text-shadow:0 0 5px var(--color-primary-cyan-700), 0 0 20px var(--color-primary-cyan-700);
+    }
+    100% {
+        text-shadow:0 0 35px var(--color-primary-cyan-700), 0 0 60px var(--color-primary-cyan-700);
+    }
+}
+
+@keyframes alt-text-glow {
+    0% {
+        text-shadow:0 0 50px var(--color-primary-magenta-700), 0 0 80px var(--color-primary-magenta-700);
+    }
+    50% {
+        text-shadow:0 0 20px var(--color-primary-magenta-700), 0 0 45px var(--color-primary-magenta-700);
+    }
+    100% {
+        text-shadow:0 0 50px var(--color-primary-magenta-700), 0 0 80px var(--color-primary-magenta-700);
+    }
+}
+
+@keyframes skills-glow {
+    0% {
+        filter: blur(14px);
+    }
+    50% {
+        filter: blur(8px);
+    }
+    100% {
+        filter: blur(14px);
+    }
+}
+
+/* Custom Properties */
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+/* Gradient Border Rotate Animation */
+@keyframes rotate-border {
+    to {
+        --angle: 360deg;
+    }
+}

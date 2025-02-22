@@ -1,0 +1,31 @@
+.gradient-orb {
+    background-image: var(--color-holographic-gradient);
+    filter: blur(50px);
+    opacity: 0.7;
+}
+
+@keyframes float {
+    0% {
+      transform: translate(0, 0) rotate(0deg);
+      opacity: 0.7;
+    }
+    25% {
+      transform: translate(var(--random-x1), var(--random-y1)) rotate(var(--random-rotate1));
+    }
+    50% {
+      transform: translate(var(--random-x2), var(--random-y2)) rotate(var(--random-rotate2));
+      opacity: 0.4;
+    }
+    75% {
+      transform: translate(var(--random-x3), var(--random-y3)) rotate(var(--random-rotate3));
+    }
+    100% {
+      transform: translate(0, 0) rotate(360deg);
+      opacity: 0.7;
+    }
+  }
+  
+  .floating {
+    animation: float var(--duration) ease-in-out infinite;
+    will-change: transform;
+  }

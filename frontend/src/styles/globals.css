@@ -16,6 +16,58 @@
     src: url('../public/assets/fonts/Cyberverse.otf');
   }
 
+:root {
+  /* Background Colors */
+  --color-charcoal: #121212;
+  --color-purple: #1B1B2F;
+  /* Primary Colors */
+  --color-primary-cyan-900: #00FFFF;
+  --text-primary-cyan-900: #00FFFF;
+  --color-primary-cyan-700: #00CCCC;
+  --color-primary-cyan-500: #009999;
+  --color-primary-green-900: #00FF00;
+  --color-primary-green-700: #00CC00;
+  --color-primary-green-500: #009900;
+  --color-primary-magenta-900: #FF00FF;
+  --color-primary-magenta-700: #CC00CC;
+  --color-primary-magenta-500: #990099;
+  --color-primary-purple-700: #9400D3;
+  --color-primary-purple-500: #7100A1;
+  --color-primary-purple-300: #4A006E;
+  /* Secondary Colors */
+  --color-secondary-blue-700: #023E8A;
+  --color-secondary-blue-500: #012757;
+  --color-secondary-blue-300: #011024;
+  --color-secondary-dk-blue-500: #0A0F25;
+  --color-secondary-dk-blue-300: #070A1A;
+  --color-secondary-dk-blue-100: #01030D;
+  --color-secondary-magenta-500: #330033;
+  --color-secondary-magenta-300: #1A001A;
+  --color-secondary-magenta-100: #0D000D;
+  --color-secondary-purple-500: #290929;
+  --color-secondary-purple-300: #1A061A;
+  --color-secondary-purple-100: #0D030D;
+  /* Gradient Colors */
+  --color-glitch-gradient: linear-gradient(90deg, #FF00FF 0%, #00FFFF 50%, #FF00FF 100%);
+  --color-holographic-gradient: linear-gradient(90deg, #00FFFF 0%, #9400D3 100%);
+  --color-sunset-gradient: linear-gradient(90deg, #FF007F 0%, #FF4500 50%, #FFD700 100%);
+
+  --color-text-shadow: 0 0 8px rgba(0, 255, 255, 0.8), 0 0 16px rgba(255, 0, 255, 0.8);
+  /* Font Families */
+  --font-h1-ff: h1-font;
+  --font-h2-ff: h2-font;
+  --font-body-ff: body-font;
+  /* Font Sizes */
+  --text-desktop-h1: 5rem;
+  --text-desktop-h2: 3rem;
+  --text-desktop-lg-body: 1.75rem;
+  --text-desktop-body: 1.25rem;
+  --text-mobile-h1: 3.5rem;
+  --text-mobile-h2: 2.25rem;
+  --text-mobile-lg-body: 1.35rem;
+  --text-mobile-body: 1.125rem;
+}
+
 @theme {
     /* Background Colors */
     --color-charcoal: #121212;
@@ -66,6 +118,14 @@
     --text-mobile-h2: 2.25rem;
     --text-mobile-lg-body: 1.35rem;
     --text-mobile-body: 1.125rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 textarea {
