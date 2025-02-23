@@ -88,3 +88,31 @@
         --angle: 360deg;
     }
 }
+
+/* Pop Up Fade Animation */
+@keyframes popUpFade {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/* Avatar Glow Animation */
+@keyframes avatar-glow {
+    0% {
+        filter: drop-shadow(0 0 4px var(--color-primary-magenta-700));
+    }
+    50% {
+        filter: drop-shadow(0 0 16px var(--color-primary-magenta-700));
+    }
+    100% {
+        filter: drop-shadow(0 0 4px var(--color-primary-magenta-700));
+    }
+}
+
+
+

@@ -16,6 +16,7 @@
     "@phosphor-icons/react": "^2.1.7",
     "@tailwindcss/vite": "^4.0.8",
     "boxicons": "^2.1.4",
+    "gsap": "^3.12.7",
     "react": "^19.0.0",
     "react-boxicons": "^0.0.26",
     "react-dom": "^19.0.0",

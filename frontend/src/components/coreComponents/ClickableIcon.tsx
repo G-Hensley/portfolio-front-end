@@ -15,7 +15,7 @@ export default function ClickableIcon({ icon, link, label, className }: Clickabl
             target="_blank" 
             rel="noopener noreferrer"
             href={link} 
-            className={`icon-link h-fit ${className || ''}`}
+            className={`h-fit ${className || ''}`}
             aria-label={label}
         >
             {icon}

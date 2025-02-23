@@ -1,0 +1,122 @@
+#about-section {
+    animation: border-glow 5s linear infinite;
+    border-top: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(
+    90deg,
+    var(--color-primary-cyan-900),
+    var(--color-primary-magenta-900),
+    var(--color-primary-cyan-900)
+  );
+  scroll-snap-align: start;
+}
+
+#abt-section-title {
+    animation: alt-text-glow 5s infinite;
+    -webkit-text-stroke: 1px var(--color-primary-magenta-900);
+}
+
+#information-grid {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        'backstory . education'
+        '. hobbies .'
+        'future . why';
+    height: fit-content;
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transform: scaleX(0.1);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.info-container:nth-child(even) {
+    background-image: linear-gradient(47deg, black, var(--color-secondary-magenta-500), black);
+}
+
+.info-container:nth-child(odd) {
+    background-image: linear-gradient(7deg, black, var(--color-secondary-magenta-300), black);
+}
+
+.info-container {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 1rem 2rem;
+}
+
+.animated {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.info-container::after {
+    animation: rotate-border 8s linear infinite, skills-glow 5s infinite;
+    content: '';
+    border-radius: 12px;
+    filter: blur(18px);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      var(--angle),
+      var(--color-primary-cyan-500),
+      var(--color-primary-magenta-500)
+    );
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.info-title {
+    color: black;
+    text-shadow: 0 0 10px var(--color-primary-cyan-900);
+    -webkit-text-stroke: 1px var(--color-primary-cyan-900);
+    text-align: center;
+}
+
+#personal-story {
+    grid-area: backstory;
+}
+
+#education {
+    grid-area: education;
+}
+
+#hobbies {
+    grid-area: hobbies;
+}
+
+#future {
+    grid-area: future;
+}
+
+#why {
+    grid-area: why;
+}
+
+@media (max-width: 1400px) {
+    #information-grid {
+        align-items: stretch;
+        row-gap: 3rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            'backstory'
+            'education'
+            'hobbies'
+            'future'
+            'why';
+    }
+
+    .info-container {
+        height: fit-content;
+    }
+}
+    
