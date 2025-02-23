@@ -3,17 +3,17 @@
 /* Custom font faces */
 @font-face {
     font-family: h1-font;
-    src: url('../public/assets/fonts/SuperCommando.otf');
+    src: url('../assets/fonts/SuperCommando.otf');
   }
   
   @font-face {
     font-family: body-font;
-    src: url('../public/assets/fonts/ChakraPetch-Regular.ttf');
+    src: url('../assets/fonts/ChakraPetch-Regular.ttf');
   }
   
   @font-face {
     font-family: h2-font;
-    src: url('../public/assets/fonts/Cyberverse.otf');
+    src: url('../assets/fonts/Cyberverse.otf');
   }
 
 :root {
