@@ -263,7 +263,7 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
       id='skills-section'
       className='flex flex-col gap-12 items-center min-h-screen w-full py-8 relative z-10'>
       {props.children}
-      <h2 className='font-h2-ff relative mt-16 text-mobile-h2 md:text-desktop-h2'>
+      <h2 className='font-h2-ff relative md:mt-16 text-mobile-h2 md:text-desktop-h2'>
         Skills
       </h2>
 

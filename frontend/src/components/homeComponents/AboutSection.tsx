@@ -39,7 +39,7 @@ export default function AboutSection( { children }: { children: React.ReactNode 
         <section id="about-section" className='flex flex-col gap-12 items-center min-h-screen w-full p-8 md:px-16 relative z-10'>
             {children}
 
-            <h2 id="abt-section-title" className='font-h2-ff mt-16 text-desktop-h2'>About Me</h2>
+            <h2 id="abt-section-title" className='font-h2-ff md:mt-16 text-desktop-h2'>About Me</h2>
 
             <div id="information-grid">
 

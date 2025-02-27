@@ -8,7 +8,7 @@ import { BiLogoPostgresql, BiLogoTypescript, BiLogoTailwindCss, BiLogoHeroku, Bi
 import { IoLogoVercel } from "react-icons/io5";
 import { SiPrisma, SiExpress } from "react-icons/si";
 
-export default function Footer() {
+export default function Footer({ children }: { children: React.ReactNode }) {
 
     const date = new Date();
     const year = date.getFullYear();
@@ -35,6 +35,7 @@ export default function Footer() {
     return (
 
         <footer className='bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 py-6 relative pb-12 text-primary-cyan-900 w-full'>
+            {children}
 
             <section id='tech-stack-section' className='flex flex-col gap-2 items-center mx-4 md:mx-0 md:ml-4 2xl:w-1/3'>
 

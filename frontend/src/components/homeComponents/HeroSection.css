@@ -76,9 +76,9 @@ h2 {
 
 .type-animation {
   animation: h2-glow 10s linear infinite;
-  color: rgba(0, 0, 0, 0.747);
+  color: white;
+  font-weight: bolder;
   user-select: none;
-  -webkit-text-stroke: 1px var(--color-primary-cyan-900);
 }
 
 #avatar-frame {
@@ -156,3 +156,22 @@ h2 {
   animation: fadeSlideUp 0.8s ease-out 1.2s forwards;
   opacity: 0;
 }
+
+@media (max-width: 768px) {
+  h1 {
+    animation: sm-alt-text-glow 5s linear infinite;
+  }
+  
+  h2 {
+    animation: sm-h2-glow 6s linear infinite;
+    color: rgba(0, 0, 0, 0.747);
+    user-select: none;
+    -webkit-text-stroke: 1px var(--color-primary-cyan-900);
+  }
+
+  .type-animation {
+    animation: sm-h2-glow 10s linear infinite;
+  }
+
+}
+

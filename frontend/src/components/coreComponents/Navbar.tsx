@@ -40,17 +40,17 @@ export default function Navbar({
         } 
                 sm:opacity-100`}>
         <li className='nav-li'>
-          <a onClick={toggleMenu} href='#' className='nav-link px-0.5'>
+          <a onClick={toggleMenu} href='#about-section' className='nav-link px-0.5'>
             About
           </a>
         </li>
         <li className='nav-li'>
-          <a onClick={toggleMenu} href='#' className='nav-link px-0.5'>
+          <a onClick={toggleMenu} href='#contact-section' className='nav-link px-0.5'>
             Contact
           </a>
         </li>
         <li className='nav-li'>
-          <a onClick={toggleMenu} href='#' className='nav-link px-0.5'>
+          <a onClick={toggleMenu} href='#hero-section' className='nav-link px-0.5'>
             Home
           </a>
         </li>

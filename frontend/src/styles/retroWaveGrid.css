@@ -3,7 +3,7 @@
   height: 50vh;
   left: 0;
   mask: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%, transparent 100%); /* Mask the grid */
-  mask: linear-gradient(0deg, rgb(0, 0, 0) 10%, transparent 90%);
+  mask: linear-gradient(0deg, rgb(0, 0, 0) 10%, transparent 70%);
   overflow: hidden;
   perspective: 200px;
   position: absolute;
@@ -34,5 +34,15 @@
   }
   100% {
     transform: rotateX(50deg) translateY(80px);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    height: 100%;
+  }
+
+  .grid {
+    height: 100%;
   }
 }

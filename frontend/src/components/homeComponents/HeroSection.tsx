@@ -9,7 +9,7 @@ import Resume from '../../assets/files/Gavin_Hensley_Full_Stack_Developer_Resume
 import GradientOrbs from '../coreComponents/GradientOrbs';
 import { RiArrowDownSFill } from 'react-icons/ri';
 
-export default function HeroSection() {
+export default function HeroSection({ children }: { children: React.ReactNode }) {
   const typingSequence = [
     'Full Stack Developer',
     2000,
@@ -28,10 +28,11 @@ export default function HeroSection() {
   return (
     <main
       id='hero-section'
-      className='flex flex-col items-center h-screen w-full relative top-0 left-0 overflow-hidden'>
+      className='flex flex-col items-center min-h-fit w-full relative top-0 left-0 overflow-hidden'>
+      {children}
       <GradientOrbs />
 
-      <header className='flex flex-col h-fit w-full items-center mt-32 relative text-center px-8'>
+      <header className='flex flex-col min-h-fit w-full items-center mt-20 md:mt-32 relative text-center px-8'>
         <h1 className='text-mobile-h1 md:text-desktop-h1 font-h1-ff'>
           Welcome User
         </h1>
@@ -41,11 +42,11 @@ export default function HeroSection() {
       </header>
 
       <section
-        className='flex flex-col md:flex-row items-center justify-center relative w-full mx-auto z-20'
+        className='flex flex-col md:flex-row items-center justify-center relative h-fit w-full mx-auto z-20'
         id='avatar-section'>
         <div
           id='avatar-container'
-          className='h-fit relative md:w-1/2 flex justify-end items-center'>
+          className='min-h-fit relative md:w-1/2 flex justify-end items-center'>
           <img
             id='avatar-frame'
             src={avatarContainer}
@@ -83,7 +84,7 @@ export default function HeroSection() {
 
       <div
         id='scroll-indicator'
-        className='flex flex-col items-center gap-0 justify-center relative top-20 z-10 px-8'>
+        className='flex flex-col min-h-fit items-center gap-0 justify-center relative mt-20 z-10 px-8'>
         <a href='#skills-section'>
           <h2
             id='scroll-header'
@@ -95,7 +96,7 @@ export default function HeroSection() {
           <RiArrowDownSFill
             id='down-arrow'
             className='text-transparent text-7xl md:text-9xl md:-mt-4 p-0 stroke-[0.7] 
-                    stroke-primary-magenta-700 animate-bounce duration-[2000]'
+                    stroke-primary-magenta-700 animate-bounce duration-[2000] relative'
           />
         </a>
       </div>

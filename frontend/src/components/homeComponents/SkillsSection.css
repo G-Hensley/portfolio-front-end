@@ -137,3 +137,9 @@
     justify-self: center;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .container-title {
+    text-shadow: 0 0 5px var(--color-primary-magenta-900);
+  }
+}

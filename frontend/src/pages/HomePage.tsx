@@ -19,12 +19,11 @@ export default function HomePage() {
   return (
     <div id='wrapper' className='flex flex-col'>
       <Navbar menuOpen={menuOpen} onToggleMenu={toggleMenu} />
-      {menuOpen && <ScreenCover />}
       <MouseFollower />
-      <HeroSection />
+      <HeroSection>{menuOpen && <ScreenCover />}</HeroSection>
       <SkillsSection>{menuOpen && <ScreenCover />}</SkillsSection>
       <AboutSection>{menuOpen && <ScreenCover />}</AboutSection>
-      <Footer />
+      <Footer>{menuOpen && <ScreenCover />}</Footer>
     </div>
   );
 }

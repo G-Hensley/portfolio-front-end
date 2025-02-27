@@ -115,4 +115,39 @@
 }
 
 
+@keyframes sm-h1-glow {
+    0% {
+        text-shadow:0 0 10px var(--color-primary-magenta-700), 0 0 20px var(--color-primary-purple-700);
+    }
+    50% {
+        text-shadow:0 0 2px var(--color-primary-magenta-700), 0 0 5px var(--color-primary-purple-700);
+    }
+    100% {
+        text-shadow:0 0 10px var(--color-primary-magenta-700), 0 0 20px var(--color-primary-purple-700);
+    }
+}
+
+@keyframes sm-h2-glow {
+    0% {
+        text-shadow:0 0 5px var(--color-primary-cyan-700), 0 0 10px var(--color-primary-cyan-700);
+    }
+    50% {
+        text-shadow:0 0 2px var(--color-primary-cyan-700), 0 0 5px var(--color-primary-cyan-700);
+    }
+    100% {
+        text-shadow:0 0 5px var(--color-primary-cyan-700), 0 0 10px var(--color-primary-cyan-700);
+    }
+}
+
+@keyframes sm-alt-text-glow {
+    0% {
+        text-shadow:0 0 10px var(--color-primary-magenta-700), 0 0 20px var(--color-primary-magenta-700);
+    }
+    50% {
+        text-shadow:0 0 2px var(--color-primary-magenta-700), 0 0 5px var(--color-primary-magenta-700);
+    }
+    100% {
+        text-shadow:0 0 10px var(--color-primary-magenta-700), 0 0 20px var(--color-primary-magenta-700);
+    }
+}
 

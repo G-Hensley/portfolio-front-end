@@ -120,3 +120,11 @@
     }
 }
     
+@media (max-width: 768px) {
+    #abt-section-title {
+        animation: sm-alt-text-glow 5s infinite;
+    }
+    .info-title {
+        text-shadow: 0 0 5px var(--color-primary-magenta-900);
+    }
+}
