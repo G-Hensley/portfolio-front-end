@@ -173,5 +173,9 @@ h2 {
     animation: sm-h2-glow 10s linear infinite;
   }
 
+  #scroll-header {
+    animation: sm-alt-text-glow 7s linear infinite;
+  }
+  
 }
 
