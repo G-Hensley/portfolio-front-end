@@ -125,6 +125,6 @@
         animation: sm-alt-text-glow 5s infinite;
     }
     .info-title {
-        text-shadow: 0 0 5px var(--color-primary-cyan-900);
+        text-shadow: 0 0 3px var(--color-primary-cyan-900);
     }
 }

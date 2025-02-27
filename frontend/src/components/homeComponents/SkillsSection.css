@@ -82,7 +82,7 @@
 
 .container-title {
   color: black;
-  text-shadow: 0 0 20px var(--color-primary-magenta-900);
+  text-shadow: 0 0 10px var(--color-primary-magenta-900);
   -webkit-text-stroke: 1px var(--color-primary-magenta-900);
 }
 
@@ -140,6 +140,6 @@
 
 @media screen and (max-width: 768px) {
   .container-title {
-    text-shadow: 0 0 5px var(--color-primary-magenta-900);
+    text-shadow: 0 0 3px var(--color-primary-magenta-900);
   }
 }
