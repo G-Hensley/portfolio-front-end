@@ -6,7 +6,7 @@ import './styles/globals.css';
 function App() {
 
   return (
-    <Router>
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
