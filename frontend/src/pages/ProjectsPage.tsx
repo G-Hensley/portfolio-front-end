@@ -4,7 +4,7 @@ import Navbar from '../components/coreComponents/Navbar';
 import ScreenCover from '../components/coreComponents/ScreenCover';
 import Footer from '../components/coreComponents/Footer';
 import './ProjectsPage.css';
-
+import ProjectsContainer from '../components/projectsComponents/ProjectsContainer';
 export default function ProjectsPage() {
     // State management for the nav menu button
   const [menuOpen, setMenuOpen] = useState(false);
@@ -14,9 +14,10 @@ export default function ProjectsPage() {
     console.log('Menu Open: ', menuOpen);
   };
   return (
-    <div id='wrapper' className='flex flex-col'>
+    <div id='wrapper' className='flex flex-col h-fit'>
       <Navbar menuOpen={menuOpen} onToggleMenu={toggleMenu} />
       <MouseFollower />
+      <ProjectsContainer>{menuOpen && <ScreenCover />}</ProjectsContainer>
       <Footer>{menuOpen && <ScreenCover />}</Footer>
     </div>
   );
