@@ -1,59 +1,83 @@
-# **Personal Portfolio**
+# **Personal Portfolio** 🚀
 
-A dynamic and professional personal portfolio showcasing projects, skills, and experience, with an admin page for managing projects. This project is built using modern web development tools and integrates essential security measures.
+Welcome to my cyberpunk-inspired digital hub! This portfolio showcases my skills, projects, and experience as a full-stack engineer. Right now, it’s a front-end powerhouse built with **React**, **TypeScript**, and **Tailwind CSS**, but I’ve got big plans to wire up a back-end for dynamic project management. It’s sleek, fast, and ready to impress—let’s dive in! 💻✨
 
----
+## **Table of Contents** 📋
 
-## **Table of Contents**
+- [About the Project](#about-the-project)  
+- [Features](#features)  
+- [Tech Stack](#tech-stack)  
+- [Getting Started](#getting-started)  
+- [Usage](#usage)  
+- [Future Plans](#future-plans)  
+- [Project Structure](#project-structure)  
+- [Contributing](#contributing)  
+- [License](#license)  
 
-1. [About the Project](#about-the-project)  
-2. [Features](#features)  
-3. [Tech Stack](#tech-stack)  
-4. [Getting Started](#getting-started)  
-5. [Usage](#usage)  
-6. [API Endpoints](#api-endpoints)  
-7. [Security Measures](#security-measures)  
-8. [Project Structure](#project-structure)  
-9. [Contributing](#contributing)  
-10. [License](#license)
+## **About the Project** 🌐
 
----
+This isn’t just a portfolio—it’s my digital playground. With a cyberpunk twist, it’s designed to look great on any screen, thanks to responsive Tailwind CSS magic. Currently, it’s all front-end, but I’m gearing up to add a back-end for next-level functionality. Stay tuned for the upgrade! 🔮
 
-## **About the Project**
+## **Features** ✨
 
-This personal portfolio is designed to showcase projects, skills, and experiences while offering an admin interface for adding, updating, and deleting projects dynamically. The application emphasizes best practices in both frontend design and backend security.
+- **Home Page** 🏠: A bold hero section that screams “Engineer”  
+- **Projects Page** 📂: Slick project cards (hard-coded for now, dynamic soon).  
+- **About Page** ℹ️: My skills, experience, and story.  
+- **Contact Section** 📧: Contact me via the footer form.  
+- **Responsive Design** 📱💻: Cyberpunk vibes on every device.
 
----
+## **Tech Stack** 🛠️
 
-## **Features**
+### **Front-End (Live Now)** 🎨  
+- **React** ⚛️: Smooth, interactive UI.  
+- **TypeScript** 🟦: Clean, type-safe code.  
+- **Tailwind CSS** 🎨: Futuristic, responsive styling.  
 
-- **Home Page:** Visually engaging hero section and highlights about the developer.
-- **Projects Page:** Dynamically rendered project cards with information fetched from a database.
-- **About Page:** Overview of professional background, skills, and experience.
-- **Contact Section:** Contact form integrated into the footer for seamless communication.
-- **Admin Page:** Secure interface for managing projects (add, update, delete).
-- **Responsive Design:** Optimized for desktop and mobile devices.
-- **Security Measures:** Input validation, sanitization, authentication, and penetration-tested application.
+### **Back-End (In the Works)** 🖥️  
+- **Node.js** 🟩: Server-side power.  
+- **Express** 🚀: RESTful API goodness.  
+- **PostgreSQL or MongoDB** 🗄️: Data storage.  
+- **JWT** 🔑: Locked-down authentication.  
 
----
+### **Hosting** 🌐  
+- **Vercel** 🚀: Blazing-fast front-end deployment.
 
-## **Tech Stack**
+## **Getting Started** 🏁
 
-### Frontend:
-- **React**  
-- **TypeScript**  
-- **Tailwind CSS**
+### **Prerequisites** 📦  
+- Node.js (v16+)  
+- npm or Yarn  
 
-### Backend:
-- **Node.js**  
-- **Express**  
+### **Installation** 🔧  
+1. Clone the repo:  
+   ```bash
+   git clone https://github.com/G-Hensley/portfolio.git
+   ```
+2. Jump in:
+   ```bash
+   cd portfolio
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Fire it up:
+   ```bash
+   npm run dev
+   ```
+## **Usage** 💡
 
-### Database:
-- **PostgreSQL** (or **MongoDB**)  
+Check out [gavinhensley.dev](https://gavinhensley.dev) to see my work in action. Drop me a line via the contact form—I’m all ears! Keep an eye out for back-end updates dropping soon.
 
-### Authentication:
-- **JWT (JSON Web Token)**
+## **Future Plans** 🔮
 
-### Hosting:
-- **Vercel (Frontend)**  
-- **Heroku (Backend)**  
+This portfolio’s about to level up:  
+- **Dynamic Back-End**: Node.js + Express APIs for project management.  
+- **Database**: PostgreSQL or MongoDB to keep things organized.  
+- **Admin Interface**: Secure project CRUD with JWT auth.  
+- **Hosting**: Back-end on Heroku for reliability.  
+- **Security**: Validation, sanitization, and pen-testing to keep it tight.
+
+## **License** 📜
+
+MIT License—check the [LICENSE](LICENSE) file for the details.  
