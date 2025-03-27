@@ -1,0 +1,23 @@
+.mouse-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.mouse-gradient {
+    position: absolute;
+    filter: blur(100px);
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+    height: 300px;
+    width: 300px;
+    background: radial-gradient(circle, var(--color-primary-purple-700) 0%, rgb(63, 57, 150), cyan);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.15s ease;
+}
