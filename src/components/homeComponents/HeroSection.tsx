@@ -5,7 +5,7 @@ import './HeroSection.css';
 import avatarContainer from '../../assets/images/avatar-container.svg';
 import avatar from '../../assets/images/avatar.webp';
 import Button from '../coreComponents/Button';
-import Resume from '../../assets/files/Gavin_Hensley_Full_Stack_Developer_Resume.pdf';
+import Resume from '../../assets/files/Gavin_Hensley_FullStack_Engineer.pdf';
 import GradientOrbs from '../coreComponents/GradientOrbs';
 import { RiArrowDownSFill } from 'react-icons/ri';
 
