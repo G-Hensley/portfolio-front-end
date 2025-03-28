@@ -37,7 +37,8 @@ export default function ProjectCard({
         <p className='tools-used text-primary-magenta-700 text-[1rem] sm:text-desktop-body font-h2-ff text-center relative'>
           Tools Used
         </p>
-        <div className='project-skills-container flex gap-4 justify-center relative'>
+        <div className='project-skills-container flex flex-wrap
+         gap-4 justify-center relative'>
           {skills.map((skill) => {
             return <>{skill}</>;
           })}

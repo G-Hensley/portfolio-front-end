@@ -44,13 +44,13 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://secure-expense-tracker-front-end.vercel.app/",
             description: "Full stack expense tracker built with Next.js, React, TypeScript, Tailwind, and MongoDB.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-4xl md:text-6xl" />,   
-                <IoLogoNodejs className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoTypescript className="project-skill text-4xl md:text-6xl" />,
-                <RiTailwindCssFill className="project-skill text-4xl md:text-6xl" />,
-                <SiMongodb className="project-skill text-4xl md:text-6xl" />,
-                <SiExpress className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoGraphql className="project-skill text-4xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="project-skill text-3xl md:text-6xl" />,   
+                <IoLogoNodejs className="project-skill text-3xl md:text-6xl" />,
+                <BiLogoTypescript className="project-skill text-3xl md:text-6xl" />,
+                <RiTailwindCssFill className="project-skill text-3xl md:text-6xl" />,
+                <SiMongodb className="project-skill text-3xl md:text-6xl" />,
+                <SiExpress className="project-skill text-3xl md:text-6xl" />,
+                <BiLogoGraphql className="project-skill text-3xl md:text-6xl" />,
             ]
         },
         {
