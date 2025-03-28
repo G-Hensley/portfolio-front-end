@@ -131,6 +131,26 @@ export default function Navbar({
         <li className='nav-li'>
           <a
             onClick={toggleMenu}
+            href='/#hero-section'
+            className={`nav-link px-0.5 ${
+              activeLink === 'home' ? 'active' : ''
+            }`}>
+            Home
+          </a>
+        </li>
+        <li className='nav-li'>
+          <a
+            onClick={toggleMenu}
+            href='/#skills-section'
+            className={`nav-link px-0.5 ${
+              activeLink === 'skills' ? 'active' : ''
+            }`}>
+            Skills
+          </a>
+        </li>
+        <li className='nav-li'>
+          <a
+            onClick={toggleMenu}
             href='/#about-section'
             className={`nav-link px-0.5 ${
               activeLink === 'about' ? 'active' : ''
@@ -151,31 +171,11 @@ export default function Navbar({
         <li className='nav-li'>
           <a
             onClick={toggleMenu}
-            href='/#hero-section'
-            className={`nav-link px-0.5 ${
-              activeLink === 'home' ? 'active' : ''
-            }`}>
-            Home
-          </a>
-        </li>
-        <li className='nav-li'>
-          <a
-            onClick={toggleMenu}
             href='/projects'
             className={`nav-link px-0.5 ${
               activeLink === 'projects' ? 'active' : ''
             }`}>
             Projects
-          </a>
-        </li>
-        <li className='nav-li'>
-          <a
-            onClick={toggleMenu}
-            href='/#skills-section'
-            className={`nav-link px-0.5 ${
-              activeLink === 'skills' ? 'active' : ''
-            }`}>
-            Skills
           </a>
         </li>
       </ul>

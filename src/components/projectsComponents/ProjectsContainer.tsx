@@ -9,6 +9,7 @@ import reactNoteApp from "../../assets/images/react-note-app.webp";
 import expenseTracker from "../../assets/images/expense-tracker.webp";
 import reactToDoApp from "../../assets/images/react-todo-app.webp";
 import bookmarkManager from "../../assets/images/bookmark-manager.webp";
+import quickStockInventory from "../../assets/images/quickstock.webp";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -22,12 +23,13 @@ import { RiTailwindCssFill } from 'react-icons/ri';
 // import { FaGitAlt, FaTrello, FaFigma } from 'react-icons/fa';
 import {
   BiLogoTypescript,
+  BiLogoPostgresql,
+  BiLogoGraphql
 } from 'react-icons/bi';
 import {
   SiMongodb,
   SiExpress,
 } from 'react-icons/si';
-import tailwindcss from "@tailwindcss/vite";
 // import { VscVscode } from 'react-icons/vsc';
 // import { IoLogoVercel, IoLogoGitlab } from 'react-icons/io5';
 // import { GithubLogo } from '@phosphor-icons/react';
@@ -48,6 +50,21 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
                 <RiTailwindCssFill className="project-skill text-4xl md:text-6xl" />,
                 <SiMongodb className="project-skill text-4xl md:text-6xl" />,
                 <SiExpress className="project-skill text-4xl md:text-6xl" />,
+                <BiLogoGraphql className="project-skill text-4xl md:text-6xl" />,
+            ]
+        },
+        {
+            key: uuidv4(),
+            title: "Quick Stock Inventory",
+            image: quickStockInventory,
+            link: "https://github.com/G-Hensley/quickstock.git",
+            description: "Full stack inventory management system built with React, TypeScript, Tailwind, and MongoDB.",
+            skills: [
+                <FontAwesomeIcon icon={faReact} className="project-skill text-4xl md:text-6xl" />,
+                <BiLogoTypescript className="project-skill text-4xl md:text-6xl" />,
+                <RiTailwindCssFill className="project-skill text-4xl md:text-6xl" />,
+                <SiExpress className="project-skill text-4xl md:text-6xl" />,
+                <BiLogoPostgresql className="project-skill text-4xl md:text-6xl" />,
             ]
         },
         {
