@@ -30,7 +30,7 @@ export default function ProjectCard({
       <a
         href={link}
         target='_blank'
-        className='project-info-container items-center justify-center flex-col gap-4 h-full w-full absolute left-0 top-0 p-4'>
+        className='project-info-container items-center justify-center flex-col gap-3 h-full w-full absolute left-0 top-0 p-2'>
         <p className='project-description text-[1rem] sm:text-desktop-body font-body-ff text-center relative text-primary-cyan-900'>
           {description}
         </p>

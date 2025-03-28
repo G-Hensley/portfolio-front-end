@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import HeroSection from '../components/homeComponents/HeroSection';
 import MouseFollower from '../components/coreComponents/MouseFollower';
 import Navbar from '../components/coreComponents/Navbar';
@@ -16,6 +16,17 @@ export default function HomePage() {
     setMenuOpen((prev: boolean) => !prev);
     console.log('Menu Open: ', menuOpen);
   };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+
   return (
     <div id='wrapper' className='flex flex-col'>
       <Navbar menuOpen={menuOpen} onToggleMenu={toggleMenu} />
