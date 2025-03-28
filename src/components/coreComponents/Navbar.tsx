@@ -161,7 +161,7 @@ export default function Navbar({
         <li className='nav-li'>
           <a
             onClick={toggleMenu}
-            href='#footer'
+            href='#contact-section'
             className={`nav-link px-0.5 ${
               activeLink === 'contact' ? 'active' : ''
             }`}>
