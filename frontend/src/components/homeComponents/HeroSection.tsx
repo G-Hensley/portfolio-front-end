@@ -28,7 +28,7 @@ export default function HeroSection({ children }: { children: React.ReactNode })
   return (
     <main
       id='hero-section'
-      className='flex flex-col items-center min-h-fit w-full relative top-0 left-0 overflow-hidden'>
+      className='flex flex-col items-center min-h-fit md:min-h-screen w-full relative top-0 left-0 overflow-hidden'>
       {children}
       <GradientOrbs />
 
@@ -36,7 +36,7 @@ export default function HeroSection({ children }: { children: React.ReactNode })
         <h1 className='text-mobile-h1 md:text-desktop-h1 font-h1-ff'>
           Welcome User
         </h1>
-        <h2 className='text-mobile-h2 md:text-desktop-h2 font-h2-ff relative'>
+        <h2 className='text-mobile-h2 md:text-desktop-h2 font-h2-ff md:mt-6 relative'>
           I'm Gavin Hensley
         </h2>
       </header>
@@ -95,7 +95,7 @@ export default function HeroSection({ children }: { children: React.ReactNode })
         <a href='#skills-section'>
           <RiArrowDownSFill
             id='down-arrow'
-            className='text-transparent text-7xl md:text-9xl md:-mt-4 p-0 stroke-[0.7] 
+            className='text-transparent text-7xl md:text-9xl p-0 stroke-[0.7] 
                     stroke-primary-magenta-700 animate-bounce duration-[2000] relative'
           />
         </a>

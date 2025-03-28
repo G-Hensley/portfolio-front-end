@@ -15,15 +15,15 @@ export default function Footer({ children }: { children: React.ReactNode }) {
 
     const techStack = [
         { icon: <FontAwesomeIcon icon={faReact} className="skill-icon text-4xl md:text-5xl" />, link: "https://react.dev/", label: "React" },
-        { icon: <IoLogoNodejs className="skill-icon text-4xl md:text-5xl" />, link: "https://nodejs.org/", label: "Node.js" },
-        { icon: <BiLogoPostgresql className="skill-icon text-4xl md:text-5xl" />, link: "https://www.postgresql.org/", label: "PostgreSQL" },
-        { icon: <SiPrisma className="skill-icon text-4xl md:text-5xl" />, link: "https://www.prisma.io/", label: "Prisma" },
+        // { icon: <IoLogoNodejs className="skill-icon text-4xl md:text-5xl" />, link: "https://nodejs.org/", label: "Node.js" },
+        // { icon: <BiLogoPostgresql className="skill-icon text-4xl md:text-5xl" />, link: "https://www.postgresql.org/", label: "PostgreSQL" },
+        // { icon: <SiPrisma className="skill-icon text-4xl md:text-5xl" />, link: "https://www.prisma.io/", label: "Prisma" },
         { icon: <BiLogoTypescript className="skill-icon text-4xl md:text-5xl" />, link: "https://www.typescriptlang.org/", label: "TypeScript" },
         { icon: <BiLogoTailwindCss className="skill-icon text-4xl md:text-5xl" />, link: "https://tailwindcss.com/", label: "Tailwind CSS" },
-        { icon: <BiLogoGraphql className="skill-icon text-4xl md:text-5xl" />, link: "https://graphql.org/", label: "GraphQL" },
-        { icon: <BiLogoHeroku className="skill-icon text-4xl md:text-5xl" />, link: "https://www.heroku.com/", label: "Heroku" },
+        // { icon: <BiLogoGraphql className="skill-icon text-4xl md:text-5xl" />, link: "https://graphql.org/", label: "GraphQL" },
+        // { icon: <BiLogoHeroku className="skill-icon text-4xl md:text-5xl" />, link: "https://www.heroku.com/", label: "Heroku" },
         { icon: <IoLogoVercel className="skill-icon text-4xl md:text-5xl" />, link: "https://vercel.com/", label: "Vercel" },
-        { icon: <SiExpress className="skill-icon text-4xl md:text-5xl" />, link: "https://expressjs.com/", label: "Express" },
+        // { icon: <SiExpress className="skill-icon text-4xl md:text-5xl" />, link: "https://expressjs.com/", label: "Express" },
     ];
 
     const socialIcons = [

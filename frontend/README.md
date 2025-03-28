@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
+# **Personal Portfolio**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic and professional personal portfolio showcasing projects, skills, and experience, with an admin page for managing projects. This project is built using modern web development tools and integrates essential security measures.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **Table of Contents**
 
-## Expanding the ESLint configuration
+1. [About the Project](#about-the-project)  
+2. [Features](#features)  
+3. [Tech Stack](#tech-stack)  
+4. [Getting Started](#getting-started)  
+5. [Usage](#usage)  
+6. [API Endpoints](#api-endpoints)  
+7. [Security Measures](#security-measures)  
+8. [Project Structure](#project-structure)  
+9. [Contributing](#contributing)  
+10. [License](#license)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## **About the Project**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+This personal portfolio is designed to showcase projects, skills, and experiences while offering an admin interface for adding, updating, and deleting projects dynamically. The application emphasizes best practices in both frontend design and backend security.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## **Features**
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Home Page:** Visually engaging hero section and highlights about the developer.
+- **Projects Page:** Dynamically rendered project cards with information fetched from a database.
+- **About Page:** Overview of professional background, skills, and experience.
+- **Contact Section:** Contact form integrated into the footer for seamless communication.
+- **Admin Page:** Secure interface for managing projects (add, update, delete).
+- **Responsive Design:** Optimized for desktop and mobile devices.
+- **Security Measures:** Input validation, sanitization, authentication, and penetration-tested application.
+
+---
+
+## **Tech Stack**
+
+### Frontend:
+- **React**  
+- **TypeScript**  
+- **Tailwind CSS**
+
+### Backend:
+- **Node.js**  
+- **Express**  
+
+### Database:
+- **PostgreSQL** (or **MongoDB**)  
+
+### Authentication:
+- **JWT (JSON Web Token)**
+
+### Hosting:
+- **Vercel (Frontend)**  
+- **Heroku (Backend)**  

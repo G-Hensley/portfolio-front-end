@@ -114,3 +114,15 @@
 .nav-link:hover::before {
   height: 107%;
 }
+
+.nav-link.active {
+  color: var(--color-primary-magenta-900);
+}
+
+.nav-link.active::after {
+  width: 102%;
+}
+
+.nav-link.active::before {
+  height: 107%;
+}

@@ -72,6 +72,7 @@ h2 {
   color: rgba(0, 0, 0, 0.747);
   user-select: none;
   -webkit-text-stroke: 1px var(--color-primary-cyan-900);
+  line-height: 2.5rem;
 }
 
 .type-animation {
