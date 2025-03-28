@@ -60,11 +60,11 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://github.com/G-Hensley/quickstock.git",
             description: "Full stack inventory management system built with React, TypeScript, Tailwind, and MongoDB.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoTypescript className="project-skill text-4xl md:text-6xl" />,
-                <RiTailwindCssFill className="project-skill text-4xl md:text-6xl" />,
-                <SiExpress className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoPostgresql className="project-skill text-4xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="project-skill text-3xl md:text-6xl" />,
+                <BiLogoTypescript className="project-skill text-3xl md:text-6xl" />,
+                <RiTailwindCssFill className="project-skill text-3xl md:text-6xl" />,
+                <SiExpress className="project-skill text-3xl md:text-6xl" />,
+                <BiLogoPostgresql className="project-skill text-3xl md:text-6xl" />,
             ]
         },
         {
@@ -74,9 +74,9 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://brendahensley.tech",
             description: "Custom personal front end portfolio built for my wife, to showcase her cyberseucrity skills.",
             skills: [
-                <IoLogoHtml5 className="project-skill text-4xl md:text-6xl" />,
-                <IoLogoCss3 className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoJavascript className="project-skill text-4xl md:text-6xl" />,
+                <IoLogoHtml5 className="project-skill text-3xl md:text-6xl" />,
+                <IoLogoCss3 className="project-skill text-3xl md:text-6xl" />,
+                <BiLogoJavascript className="project-skill text-3xl md:text-6xl" />,
             ]
         },
         {
@@ -86,9 +86,9 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://nextjs-todo-list-tau-topaz.vercel.app/",
             description: "Front end to do app built with React.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoTypescript className="project-skill text-4xl md:text-6xl" />,
-                <RiTailwindCssFill className="project-skill text-4xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="project-skill text-3xl md:text-6xl" />,
+                <BiLogoTypescript className="project-skill text-3xl md:text-6xl" />,
+                <RiTailwindCssFill className="project-skill text-3xl md:text-6xl" />,
             ]
         },
         {
@@ -98,9 +98,9 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://g-hensley.github.io/earths-orbit/",
             description: "Front end solar system simulation built with HTML, CSS, and JavaScript.",
             skills: [
-                <IoLogoHtml5 className="project-skill text-4xl md:text-6xl" />,
-                <IoLogoCss3 className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoJavascript className="project-skill text-4xl md:text-6xl" />,
+                <IoLogoHtml5 className="project-skill text-3xl md:text-6xl" />,
+                <IoLogoCss3 className="project-skill text-3xl md:text-6xl" />,
+                <BiLogoJavascript className="project-skill text-3xl md:text-6xl" />,
             ]
         },
         {
@@ -110,9 +110,9 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://react-password-generator-opal.vercel.app/",
             description: "Front end password generator built with React.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoTypescript className="project-skill text-4xl md:text-6xl" />,
-                <RiTailwindCssFill className="project-skill text-4xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="project-skill text-3xl md:text-6xl" />,
+                <BiLogoTypescript className="project-skill text-3xl md:text-6xl" />,
+                <RiTailwindCssFill className="project-skill text-3xl md:text-6xl" />,
             ]
         },
         {
@@ -122,9 +122,9 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://notes-app-seven-orcin.vercel.app/",
             description: "Front end note taking app built with React that saves to local storage.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoJavascript className="project-skill text-4xl md:text-6xl" />,
-                <IoLogoCss3 className="project-skill text-4xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="project-skill text-3xl md:text-6xl" />,
+                <BiLogoJavascript className="project-skill text-3xl md:text-6xl" />,
+                <IoLogoCss3 className="project-skill text-3xl md:text-6xl" />,
             ]
         },
         {
@@ -135,8 +135,8 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             description: "Front end bookmark manager built with React.",
             skills: [
                 <FontAwesomeIcon icon={faReact} className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoTypescript className="project-skill text-4xl md:text-6xl" />,
-                <RiTailwindCssFill className="project-skill text-4xl md:text-6xl" />,
+                <BiLogoTypescript className="project-skill text-3xl md:text-6xl" />,
+                <RiTailwindCssFill className="project-skill text-3xl md:text-6xl" />,
             ]
         }
     ]
