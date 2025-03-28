@@ -11,7 +11,7 @@ import { RiArrowDownSFill } from 'react-icons/ri';
 
 export default function HeroSection({ children }: { children: React.ReactNode }) {
   const typingSequence = [
-    'Full Stack Developer',
+    'Full Stack Engineer',
     2000,
     'Prompt Engineer',
     2000,
