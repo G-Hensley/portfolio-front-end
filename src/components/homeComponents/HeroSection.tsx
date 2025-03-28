@@ -36,7 +36,7 @@ export default function HeroSection({ children }: { children: React.ReactNode })
         <h1 className='text-mobile-h1 md:text-desktop-h1 font-h1-ff'>
           Welcome User
         </h1>
-        <h2 className='text-mobile-h2 md:text-desktop-h2 font-h2-ff md:mt-6 relative'>
+        <h2 className='text-mobile-h2 md:text-desktop-h2 font-h2-ff mt-2 md:mt-6 relative'>
           I'm Gavin Hensley
         </h2>
       </header>
@@ -69,7 +69,7 @@ export default function HeroSection({ children }: { children: React.ReactNode })
       </section>
 
       <a
-        className='relative z-10'
+        className='relative z-10 -mt-4 sm:mt-0'
         href={Resume}
         id='resume-download'
         download='Gavin_Hensley_Resume.pdf'>
