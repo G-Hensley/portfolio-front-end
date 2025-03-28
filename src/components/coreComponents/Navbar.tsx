@@ -104,14 +104,35 @@ export default function Navbar({
     }
   };
 
+  // Handle keyboard events for accessibility
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      toggleMenu();
+    }
+  };
+
   return (
-    <nav className='flex sm:justify-center left-0 py-4 top-0 w-full z-[100] fixed'>
+    <nav
+      className='flex sm:justify-center left-0 py-4 top-0 w-full z-[100] fixed'
+      aria-label='Main Navigation'>
+      {/* Skip to main content link for keyboard users */}
+      <a
+        href='#hero-section'
+        className='sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-[200] bg-primary-cyan-900 text-charcoal p-2 m-2'>
+        Skip to main content
+      </a>
+
       <button
         id='nav-menu-btn'
         className={`sm:hidden fixed cursor-pointer flex flex-col h-10 items-end justify-around right-4 top-4 w-10 z-[101] ${
           menuOpen ? 'open-menu' : ''
         }`}
-        onClick={toggleMenu}>
+        onClick={toggleMenu}
+        onKeyDown={handleKeyDown}
+        aria-expanded={menuOpen}
+        aria-controls='nav-list'
+        aria-label={menuOpen ? 'Close menu' : 'Open menu'}>
         <div className='h-1 relative w-10 nav-menu-line'></div>
         <div className='h-1 relative w-10 nav-menu-line'></div>
         <div className='h-1 relative w-10 nav-menu-line'></div>
@@ -120,6 +141,8 @@ export default function Navbar({
       {/* Nav Menu Links */}
       <ul
         id='nav-list'
+        role='menubar'
+        aria-label='Site Pages'
         className={`nav-list absolute flex flex-col gap-12 
                 items-center justify-center p-8 sm:py-2 sm:px-4 sm:flex-row sm:top-4 h1-ff 
                 desktop-h1 top-24 text-mobile-lg-body sm:text-desktop-body w-full sm:w-auto 
@@ -128,53 +151,63 @@ export default function Navbar({
           menuOpen ? 'opacity-100' : 'opacity-0'
         } 
                 sm:opacity-100`}>
-        <li className='nav-li'>
+        <li className='nav-li' role='none'>
           <a
+            role='menuitem'
             onClick={toggleMenu}
             href='/#hero-section'
             className={`nav-link px-0.5 ${
               activeLink === 'home' ? 'active' : ''
-            }`}>
+            }`}
+            aria-current={activeLink === 'home' ? 'page' : undefined}>
             Home
           </a>
         </li>
-        <li className='nav-li'>
+        <li className='nav-li' role='none'>
           <a
+            role='menuitem'
             onClick={toggleMenu}
             href='/#skills-section'
             className={`nav-link px-0.5 ${
               activeLink === 'skills' ? 'active' : ''
-            }`}>
+            }`}
+            aria-current={activeLink === 'skills' ? 'page' : undefined}>
             Skills
           </a>
         </li>
-        <li className='nav-li'>
+        <li className='nav-li' role='none'>
           <a
+            role='menuitem'
             onClick={toggleMenu}
             href='/#about-section'
             className={`nav-link px-0.5 ${
               activeLink === 'about' ? 'active' : ''
-            }`}>
+            }`}
+            aria-current={activeLink === 'about' ? 'page' : undefined}>
             About
           </a>
         </li>
-        <li className='nav-li'>
+        <li className='nav-li' role='none'>
           <a
+            role='menuitem'
             onClick={toggleMenu}
-            href='#contact-section'
+            href='#footer'
             className={`nav-link px-0.5 ${
               activeLink === 'contact' ? 'active' : ''
-            }`}>
+            }`}
+            aria-current={activeLink === 'contact' ? 'page' : undefined}>
             Contact
           </a>
         </li>
-        <li className='nav-li'>
+        <li className='nav-li' role='none'>
           <a
+            role='menuitem'
             onClick={toggleMenu}
             href='/projects'
             className={`nav-link px-0.5 ${
               activeLink === 'projects' ? 'active' : ''
-            }`}>
+            }`}
+            aria-current={activeLink === 'projects' ? 'page' : undefined}>
             Projects
           </a>
         </li>

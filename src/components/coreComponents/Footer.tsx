@@ -108,17 +108,26 @@ export default function Footer({ children }: { children: React.ReactNode }) {
   ];
 
   return (
-    <footer className='bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 py-6 relative pb-12 text-primary-cyan-900 w-full'>
+    <footer
+      className='bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 py-6 relative pb-12 text-primary-cyan-900 w-full'
+      id='footer'
+      role='contentinfo'
+      aria-label='Footer with contact form and social links'>
       {children}
 
       <section
         id='tech-stack-section'
-        className='flex flex-col gap-2 items-center mx-4 md:mx-0 md:ml-4 2xl:w-1/3'>
-        <h3 className='footer-title text-mobile-lg-body md:text-desktop-lg-body'>
+        className='flex flex-col gap-2 items-center mx-4 md:mx-0 md:ml-4 2xl:w-1/3'
+        aria-labelledby='tech-stack-title'>
+        <h3
+          id='tech-stack-title'
+          className='footer-title text-mobile-lg-body md:text-desktop-lg-body'>
           Tech Stack
         </h3>
 
-        <div className='icon-container flex gap-y-4 gap-x-8 flex-wrap 2xl:w-3/4 justify-center'>
+        <div
+          className='icon-container flex gap-y-4 gap-x-8 flex-wrap 2xl:w-3/4 justify-center'
+          aria-label='Technology links'>
           {techStack.map((tech, index) => (
             <ClickableIcon
               key={index}
@@ -132,14 +141,19 @@ export default function Footer({ children }: { children: React.ReactNode }) {
 
       <section
         id='contact-section'
-        className='self-center h-fit w-fit md:justify-bottom'>
-        <h3 className='footer-title text-mobile-lg-body md:text-desktop-lg-body'>
+        className='self-center h-fit w-fit md:justify-bottom'
+        aria-labelledby='contact-title'>
+        <h3
+          id='contact-title'
+          className='footer-title text-mobile-lg-body md:text-desktop-lg-body'>
           Contact Me
         </h3>
 
         <form
           onSubmit={handleSubmit}
-          className='flex flex-col items-center md:mb-4'>
+          className='flex flex-col items-center md:mb-4'
+          aria-labelledby='contact-title'
+          noValidate>
           <div
             id='name-email-container'
             className='flex flex-col xl:flex-row xl:gap-4 w-full'>
@@ -158,6 +172,8 @@ export default function Footer({ children }: { children: React.ReactNode }) {
                 className='contact-input'
                 placeholder='Your Name'
                 required
+                aria-required='true'
+                aria-invalid={formData.name === '' ? 'true' : 'false'}
               />
             </div>
 
@@ -176,6 +192,8 @@ export default function Footer({ children }: { children: React.ReactNode }) {
                 className='contact-input'
                 placeholder='Your Email'
                 required
+                aria-required='true'
+                aria-invalid={formData.email === '' ? 'true' : 'false'}
               />
             </div>
           </div>
@@ -195,6 +213,8 @@ export default function Footer({ children }: { children: React.ReactNode }) {
                 placeholder='Your Message Here...'
                 rows={4}
                 required
+                aria-required='true'
+                aria-invalid={formData.message === '' ? 'true' : 'false'}
               />
             </div>
 
@@ -202,15 +222,18 @@ export default function Footer({ children }: { children: React.ReactNode }) {
               type='submit'
               id='contact-btn'
               className='btn font-body-ff h-fit md:text-desktop-body'
-              disabled={status === 'sending'}>
+              disabled={status === 'sending'}
+              aria-busy={status === 'sending'}>
               {status === 'sending' ? 'SENDING...' : 'SUBMIT'}
             </button>
           </div>
           {status === 'success' && (
-            <p className='text-green-500 mt-2'>Message sent successfully!</p>
+            <p className='text-green-500 mt-2' role='status' aria-live='polite'>
+              Message sent successfully!
+            </p>
           )}
           {status === 'error' && (
-            <p className='text-red-500 mt-2'>
+            <p className='text-red-500 mt-2' role='alert'>
               Failed to send message. Please try again.
             </p>
           )}
@@ -219,12 +242,17 @@ export default function Footer({ children }: { children: React.ReactNode }) {
 
       <section
         id='social-section'
-        className='flex flex-col gap-2 justify-center items-center md:mr-4 2xl:w-1/3 h-full'>
-        <h3 className='footer-title text-mobile-lg-body md:text-desktop-lg-body'>
+        className='flex flex-col gap-2 justify-center items-center md:mr-4 2xl:w-1/3 h-full'
+        aria-labelledby='social-title'>
+        <h3
+          id='social-title'
+          className='footer-title text-mobile-lg-body md:text-desktop-lg-body'>
           Social
         </h3>
 
-        <div className='icon-container flex md:flex-col gap-y-4 gap-x-8 items-center 2xl:w-3/4'>
+        <div
+          className='icon-container flex md:flex-col gap-y-4 gap-x-8 items-center 2xl:w-3/4'
+          aria-label='Social media links'>
           {socialIcons.map((tech, index) => (
             <ClickableIcon
               key={index}
@@ -239,8 +267,14 @@ export default function Footer({ children }: { children: React.ReactNode }) {
       <p
         id='copyright'
         className='absolute bottom-0 text-md text-primary-magenta-900 font-body-ff w-full text-center bg-charcoal py-2'>
-        © {year} <a className='underline' href='https://github.com/G-Hensley/'>Gavin Hensley</a>. All
-        Rights Reserved.
+        © {year}{' '}
+        <a
+          className='underline'
+          href='https://github.com/G-Hensley/'
+          aria-label="Gavin Hensley's GitHub profile">
+          Gavin Hensley
+        </a>
+        . All Rights Reserved.
       </p>
     </footer>
   );
