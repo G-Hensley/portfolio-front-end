@@ -14,7 +14,7 @@ export default function ProjectsPage() {
     console.log('Menu Open: ', menuOpen);
   };
   return (
-    <div id='wrapper' className='flex flex-col h-fit'>
+    <div id='wrapper' className='flex flex-col overflow-x-hidden'>
       <Navbar menuOpen={menuOpen} onToggleMenu={toggleMenu} />
       <MouseFollower />
       <ProjectsContainer>{menuOpen && <ScreenCover />}</ProjectsContainer>

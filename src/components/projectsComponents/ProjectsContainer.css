@@ -8,7 +8,6 @@
 }
 
 .project-skill {
-    font-size: 3rem;
     color: var(--color-primary-magenta-500);
     filter: drop-shadow(0 0 8px rgba(189, 0, 189, 0.568));
 }

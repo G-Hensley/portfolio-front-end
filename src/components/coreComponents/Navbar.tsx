@@ -12,30 +12,46 @@ export default function Navbar({
 
   useEffect(() => {
     const handleScroll = () => {
-      // Only update based on scroll if there's no hash in the URL
-      if (!window.location.hash) {
-        const sections = document.querySelectorAll('section[id]');
-        const scrollY = window.pageYOffset;
+      // Don't run scroll detection on projects page
+      if (window.location.pathname === '/projects') {
+        return;
+      }
 
-        sections.forEach((section) => {
-          const htmlSection = section as HTMLElement;
-          const sectionHeight = htmlSection.offsetHeight;
-          const sectionTop = htmlSection.offsetTop - 150;
-          const sectionBottom = sectionTop + sectionHeight;
-          const sectionId = htmlSection.getAttribute('id');
+      const sections = document.querySelectorAll('section[id]');
+      const scrollY = window.pageYOffset + 100; // Increased offset to trigger later
 
-          if (scrollY >= sectionTop && scrollY < sectionBottom) {
-            if (sectionId === 'hero-section') {
-              setActiveLink('home');
-            } else if (sectionId === 'about-section') {
-              setActiveLink('about');
-            } else if (sectionId === 'skills-section') {
-              setActiveLink('skills');
-            } else if (sectionId === 'contact-section') {
-              setActiveLink('contact');
-            }
+      // Special case for hero section when at the top
+      if (scrollY < 150) {
+        setActiveLink('home');
+        return;
+      }
+
+      sections.forEach((section) => {
+        const htmlSection = section as HTMLElement;
+        const sectionHeight = htmlSection.offsetHeight;
+        const sectionTop = htmlSection.offsetTop - 100; // Increased offset to trigger later
+        const sectionBottom = sectionTop + sectionHeight;
+        const sectionId = htmlSection.getAttribute('id');
+
+        if (scrollY >= sectionTop && scrollY < sectionBottom) {
+          if (sectionId === 'hero-section') {
+            setActiveLink('home');
+          } else if (sectionId === 'about-section') {
+            setActiveLink('about');
+          } else if (sectionId === 'skills-section') {
+            setActiveLink('skills');
           }
-        });
+        }
+      });
+
+      // Check if we're near the footer
+      const footer = document.querySelector('footer');
+      if (footer) {
+        const footerTop =
+          footer.getBoundingClientRect().top + window.pageYOffset;
+        if (scrollY >= footerTop - 100) {
+          setActiveLink('contact');
+        }
       }
     };
 
@@ -43,22 +59,32 @@ export default function Navbar({
       const hash = window.location.hash;
       const path = window.location.pathname;
 
+      // Handle projects page separately since it's a different route
       if (path === '/projects') {
         setActiveLink('projects');
-      } else if (hash === '#about-section') {
-        setActiveLink('about');
-      } else if (hash === '#contact-section') {
-        setActiveLink('contact');
-      } else if (hash === '#skills-section') {
-        setActiveLink('skills');
-      } else if (hash === '#hero-section' || (!hash && path === '/')) {
-        setActiveLink('home');
+        return;
+      }
+
+      // Handle hash-based navigation
+      if (hash) {
+        const section = hash.replace('#', '');
+        if (section === 'hero-section') {
+          setActiveLink('home');
+        } else if (section === 'about-section') {
+          setActiveLink('about');
+        } else if (section === 'skills-section') {
+          setActiveLink('skills');
+        } else if (section === 'footer') {
+          setActiveLink('contact');
+        }
+      } else if (path === '/') {
+        // If no hash and we're on the home page, check scroll position
+        handleScroll();
       }
     };
 
     // Initial check
     handleHashChange();
-    handleScroll();
 
     // Add event listeners
     window.addEventListener('scroll', handleScroll);
@@ -79,10 +105,10 @@ export default function Navbar({
   };
 
   return (
-    <nav className='flex sm:justify-center left-0 py-4 top-0 w-full z-50 fixed'>
+    <nav className='flex sm:justify-center left-0 py-4 top-0 w-full z-[100] fixed'>
       <button
         id='nav-menu-btn'
-        className={`sm:hidden absolute cursor-pointer flex flex-col h-10 items-end justify-around right-4 top-4 w-10 z-50 ${
+        className={`sm:hidden fixed cursor-pointer flex flex-col h-10 items-end justify-around right-4 top-4 w-10 z-[101] ${
           menuOpen ? 'open-menu' : ''
         }`}
         onClick={toggleMenu}>
@@ -115,7 +141,7 @@ export default function Navbar({
         <li className='nav-li'>
           <a
             onClick={toggleMenu}
-            href='#contact-section'
+            href='#footer'
             className={`nav-link px-0.5 ${
               activeLink === 'contact' ? 'active' : ''
             }`}>

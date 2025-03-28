@@ -43,11 +43,11 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             title: "Custom Personal Portfolio",
             image: renaeeWebsite,
             link: "https://brendahensley.tech",
-            description: "Custom personal portfolio built for my wife, Brenda, to showcase her skills as a cybersecurity professional.",
+            description: "Custom personal front end portfolio built for my wife, to showcase her cyberseucrity skills.",
             skills: [
-                <IoLogoHtml5 className="project-skill" />,
-                <IoLogoCss3 className="project-skill" />,
-                <BiLogoJavascript className="project-skill"/>,
+                <IoLogoHtml5 className="project-skill text-4xl md:text-6xl" />,
+                <IoLogoCss3 className="project-skill text-4xl md:text-6xl" />,
+                <BiLogoJavascript className="project-skill text-4xl md:text-6xl" />,
             ]
         },
         {
@@ -55,11 +55,11 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             title: "Solar System Simulation",
             image: spaceWebsite,
             link: "https://g-hensley.github.io/earths-orbit/",
-            description: "A simulation of the earth's orbit around the sun, and the moon's orbit around the earth.",
+            description: "Front end solar system simulation built with HTML, CSS, and JavaScript.",
             skills: [
-                <IoLogoHtml5 className="project-skill" />,
-                <IoLogoCss3 className="project-skill" />,
-                <BiLogoJavascript className="project-skill"/>,
+                <IoLogoHtml5 className="project-skill text-4xl md:text-6xl" />,
+                <IoLogoCss3 className="project-skill text-4xl md:text-6xl" />,
+                <BiLogoJavascript className="project-skill text-4xl md:text-6xl" />,
             ]
         },
         {
@@ -67,12 +67,12 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             title: "Travel Nest",
             image: travelNest,
             link: "https://g-hensley.github.io/travel-nest/",
-            description: "Fake travel company landing page.",
+            description: "Fake travel company landing page built with Bootstrap.",
             skills: [
-                <IoLogoHtml5 className="project-skill" />,
-                <IoLogoSass className="project-skill" />,
-                <FaBootstrap className="project-skill" />,
-                <BiLogoJavascript className="project-skill"/>,
+                <IoLogoHtml5 className="project-skill text-4xl md:text-6xl" />,
+                <IoLogoSass className="project-skill text-4xl md:text-6xl" />,
+                <FaBootstrap className="project-skill text-4xl md:text-6xl" />,
+                <BiLogoJavascript className="project-skill text-4xl md:text-6xl" />,
             ]
         },
         {
@@ -80,22 +80,22 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             title: "Password Generator",
             image: reactPasswordGenerator,
             link: "https://react-password-generator-opal.vercel.app/",
-            description: "Password generator built that allows users to generate a random password based on the criteria they select.",
+            description: "Front end password generator built with React.",
             skills: [
-                <IoLogoCss3 className="project-skill" />,
-                <BiLogoJavascript className="project-skill"/>,
-                <FontAwesomeIcon icon={faReact} className="project-skill" />,
+                <IoLogoCss3 className="project-skill text-4xl md:text-6xl" />,
+                <BiLogoJavascript className="project-skill text-4xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="project-skill text-4xl md:text-6xl" />,
             ]
         },
     ]
     
     return (
 
-        <section className="flex flex-col gap-10 md:gap-16 items-center w-full h-fit min-h-fit mt-20 sm:mt-30 relative mb-12 px-4" id="projects-section">
+        <section className="flex flex-col gap-10 md:gap-16 items-center w-full h-max min-h-fit relative mb-12 px-4" id="projects-section">
             {children}
             <GradientOrbs />
 
-            <h1 className="text-mobile-h1 md:text-desktop-h1 font-h1-ff relative text-center">My Projects</h1>
+            <h1 className="text-mobile-h1 md:text-desktop-h1 font-h1-ff mt-20 md:mt-30 relative text-center">My Projects</h1>
 
             <div className="projects-container w-full min-h-fit relative px-4">
                 {projects.map((project) => { 
