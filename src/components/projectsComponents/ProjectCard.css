@@ -2,7 +2,7 @@
     transition: transform 0.3s ease;
 }
 
-.project-card:hover {
+.project-card:active, .project-card:hover {
     transform: scale(1.05);
 }
 
@@ -40,7 +40,7 @@
     transition: transform 0.4s ease;
 }
 
-.project-card:hover::before {
+.project-card:active::before, .project-card:hover::before {
     background-color: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(3px);
     transform: scaleX(1);
@@ -68,7 +68,7 @@
     transition: transform 0.4s ease;
 }
 
-.project-card:hover .project-info-container {
+.project-card:active .project-info-container, .project-card:hover .project-info-container {
     display: flex;
     transform: scaleY(1);
     opacity: 1;

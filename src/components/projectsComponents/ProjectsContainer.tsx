@@ -1,4 +1,5 @@
 import GradientOrbs from "../coreComponents/GradientOrbs";
+import { v4 as uuidv4 } from 'uuid';
 import ProjectCard from "./ProjectCard";
 import "./ProjectsContainer.css";
 import renaeeWebsite from "../../assets/images/Screenshot 2025-02-28 143134.png";
@@ -33,10 +34,12 @@ import { FaBootstrap } from 'react-icons/fa6';
 // import { VscVscode } from 'react-icons/vsc';
 // import { IoLogoVercel, IoLogoGitlab } from 'react-icons/io5';
 // import { GithubLogo } from '@phosphor-icons/react';
+
 export default function ProjectsContainer( {children}: {children: React.ReactNode} ) {
 
     const projects = [
         {
+            key: uuidv4(),
             title: "Custom Personal Portfolio",
             image: renaeeWebsite,
             link: "https://brendahensley.tech",
@@ -48,6 +51,7 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             ]
         },
         {
+            key: uuidv4(),
             title: "Solar System Simulation",
             image: spaceWebsite,
             link: "https://g-hensley.github.io/earths-orbit/",
@@ -59,6 +63,7 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             ]
         },
         {
+            key: uuidv4(),
             title: "Travel Nest",
             image: travelNest,
             link: "https://g-hensley.github.io/travel-nest/",
@@ -71,6 +76,7 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             ]
         },
         {
+            key: uuidv4(),
             title: "Password Generator",
             image: reactPasswordGenerator,
             link: "https://react-password-generator-opal.vercel.app/",
@@ -95,7 +101,7 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
                 {projects.map((project) => { 
                     return (
                         <ProjectCard
-                            key={project.title}
+                            key={project.key}
                             title={project.title}
                             image={project.image}
                             link={project.link}
