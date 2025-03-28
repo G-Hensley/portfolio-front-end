@@ -1,0 +1,48 @@
+.grid-container {
+  bottom: 0;
+  height: 50vh;
+  left: 0;
+  mask: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%, transparent 100%); /* Mask the grid */
+  mask: linear-gradient(0deg, rgb(0, 0, 0) 10%, transparent 70%);
+  overflow: hidden;
+  perspective: 200px;
+  position: absolute;
+  width: 100%;
+}
+  
+.grid {
+  animation: scroll-grid 4s linear infinite;
+  background: 
+    linear-gradient(rgba(0, 255, 255, 0.63) 1px, transparent 3px),
+    linear-gradient(to right, rgba(152, 255, 255, 0.568) 2px, transparent 1px);
+  background-size: 40px 20px;
+  bottom: -100px;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.8), 0 0 10px rgba(0, 255, 255, 0.6);
+  filter: drop-shadow(0 0 5px cyan);
+  height: 130%;
+  left: 0;
+  mask: linear-gradient(90deg, transparent 0%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 50%, transparent 100%);
+  position: absolute;
+  scale: 2.5;
+  transform: rotateX(60deg) translateY(0);
+  width: 100%;
+}
+  
+@keyframes scroll-grid {
+  0% {
+    transform: rotateX(50deg) translateY(0);
+  }
+  100% {
+    transform: rotateX(50deg) translateY(80px);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    height: 100%;
+  }
+
+  .grid {
+    height: 100%;
+  }
+}
