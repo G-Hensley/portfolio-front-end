@@ -11,8 +11,13 @@ import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 export default function Footer({ children }: { children: React.ReactNode }) {
+
+  const xssRegex = /<[^>]*>|javascript:|data:|vbscript:|about:|file:|ftp:/;
+  const base64Regex = /^data:image\/(png|jpeg|jpg|gif|svg|webp);base64,/i;
+
   const date = new Date();
   const year = date.getFullYear();
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -25,6 +30,17 @@ export default function Footer({ children }: { children: React.ReactNode }) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
+
+    if (!formData.name || !formData.email || !formData.message) {
+      setError('Please fill out all fields.');
+      setStatus('error');
+      return;
+    } else if (xssRegex.test(formData.name) || xssRegex.test(formData.email) || xssRegex.test(formData.message) || 
+      base64Regex.test(formData.name) || base64Regex.test(formData.email) || base64Regex.test(formData.message)) {
+        setError('Invalid input.');
+        setStatus('error');
+        return;
+    }
 
     try {
       await emailjs.send(
@@ -171,6 +187,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
                 onChange={handleChange}
                 className='contact-input'
                 placeholder='Your Name'
+                maxLength={100}
                 required
                 aria-required='true'
                 aria-invalid={formData.name === '' ? 'true' : 'false'}
@@ -191,6 +208,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
                 onChange={handleChange}
                 className='contact-input'
                 placeholder='Your Email'
+                maxLength={50}
                 required
                 aria-required='true'
                 aria-invalid={formData.email === '' ? 'true' : 'false'}
@@ -215,6 +233,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
                 required
                 aria-required='true'
                 aria-invalid={formData.message === '' ? 'true' : 'false'}
+                maxLength={300}
               />
             </div>
 
@@ -234,7 +253,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
           )}
           {status === 'error' && (
             <p className='text-red-500 mt-2' role='alert'>
-              Failed to send message. Please try again.
+              {error}
             </p>
           )}
         </form>
@@ -269,7 +288,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
         className='absolute bottom-0 text-md text-primary-magenta-900 font-body-ff w-full text-center bg-charcoal py-2'>
         © {year}{' '}
         <a
-          className='underline'
+          className='underline hover:text-primary-magenta-700 transition-colors duration-200'
           href='https://github.com/G-Hensley/'
           aria-label="Gavin Hensley's GitHub profile">
           Gavin Hensley
