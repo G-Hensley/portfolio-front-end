@@ -71,7 +71,13 @@
   z-index: -1;
 } */
 
-.container-title {
+.skill-card-title {
+  color: black;
+  text-shadow: 0 0 10px var(--color-primary-cyan-900);
+  -webkit-text-stroke: 1px var(--color-primary-cyan-900);
+}
+
+.about-card-title {
   color: black;
   text-shadow: 0 0 10px var(--color-primary-magenta-900);
   -webkit-text-stroke: 1px var(--color-primary-magenta-900);

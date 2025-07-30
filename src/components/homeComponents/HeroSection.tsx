@@ -32,7 +32,7 @@ export default function HeroSection({
   return (
     <main
       id='hero-section'
-      className='flex flex-col items-center min-h-fit md:min-h-screen w-full relative top-0 left-0 overflow-x-hidden z-10'
+      className='flex flex-col items-center min-h-fit md:min-h-screen w-full relative top-0 left-0 overflow-hidden z-10'
       aria-labelledby='welcome-heading'>
       {children}
       <GradientOrbs />

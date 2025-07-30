@@ -7,6 +7,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutSection( { children }: { children: React.ReactNode } ) {
 
+    // Content for the AboutSection component
+    const aboutContent = [
+      {
+        title: 'Personal Story',
+        text: "I'm a self-taught full-stack software developer who builds fast, accessible, and user-friendly websites. My love for technology started at age 7 when I got my first laptop and became fascinated by how software could bring ideas to life."
+      },
+      {
+        title: 'Education',
+        text: "I hold a B.S. in Software Engineering, earned in July 2025. I also hold certifications including CompTIA Project+, AWS Cloud Essentials, ITIL v4 Foundation, both the WGU Front-End and Back-End Developer certificates, and three certifications from freeCodeCamp."
+      },
+      {
+        title: 'Hobbies',
+        text: "I enjoy chess, video games, and exploring the outdoors through hiking, fishing, and travel. I'm also into astronomy and astrophotography, and I spend a lot of time reading and learning new things to expand my knowledge."
+      },
+      {
+        title: 'Future Goals',
+        text: "I’m contributing to open source to help launch a social platform for tech creators, building my own SaaS products, and laying the foundation for my freelance business. I'm also open to working with new clients who need help bringing their ideas to life through custom web development & design."
+      },
+      {
+        title: 'Why Web Development?',
+        text: "I love web development because it lets me combine creativity with technical problem-solving. I enjoy the challenge of turning ideas into functional, accessible, and well-designed experiences on the web."
+      }
+    ]
+
     useEffect(() => {
         const container = document.getElementById('information-grid');
     
@@ -41,48 +65,17 @@ export default function AboutSection( { children }: { children: React.ReactNode 
 
             <h2 id="abt-section-title" className='font-h2-ff md:mt-16 text-mobile-h2 md:text-desktop-h2'>About Me</h2>
 
-            <div id="information-grid" className='text-fuchsia-500'>
-
-                <div id="personal-story" className="info-container bg-linear-30 from-charcoal/40 via-secondary-magenta-100/30 to-charcoal/40 backdrop-blur-sm
-                border border-secondary-magenta-500/80 hover:border-primary-magenta-500/50 transition-all duration-300 shadow-md shadow-zinc-950/70">
-                    <h3 className='info-title font-body-ff relative text-xl md:text-desktop-lg-body'>Personal Story</h3>
-                    <p className='info-text font-body-ff text-base md:text-lg'>
-                      I'm a self-taught full-stack software developer who builds fast, accessible, and user-friendly websites. My love for technology started at age 7 
-                      when I got my first laptop and became fascinated by how software could bring ideas to life.
-                    </p>
+            <div className='flex w-full justify-center flex-wrap gap-4 md:gap-8 my-auto md:flex-row flex-col'>
+              { aboutContent.map((item, index) => (
+                <div key={index} className='bg-linear-150 from-secondary-magenta-100/20 via-secondary-magenta-500/40 to-secondary-magenta-100/20 flex flex-col gap-2 2xl:w-1/3
+                p-4 rounded-br-2xl rounded-tl-2xl backdrop-blur-sm border-[1.5px] border-secondary-magenta-500 hover:border-fuchsia-900
+                transition-all duration-300 shadow-md shadow-zinc-950/70 lg:w-2/5'>
+                  <h3 className='text-center font-body-ff about-card-title text-2xl'>{item.title}</h3>
+                  <p className='font-body-ff text-lg text-fuchsia-400/80'>{item.text}</p>
                 </div>
-
-                <div id="education" className="info-container bg-linear-30 from-charcoal/40 via-secondary-magenta-100/30 to-charcoal/40 backdrop-blur-sm
-                border border-secondary-magenta-500/80 hover:border-primary-magenta-500/35 transition-all duration-300 shadow-md shadow-zinc-950/70">
-                    <h3 className='info-title font-body-ff relative text-desktop-lg-body'>Education</h3>
-                    <p className='info-text font-body-ff text-mobile-body md:text-desktop-body'>
-                      I'm currently hold a B.Sc in Software Engineering. I'm expected to graduate in May 2025. I currently hold 3 certifcations
-                      from freeCodeCamp, and will be completing more soon.
-                    </p>
-                </div>
-
-                <div id="hobbies" className="info-container bg-linear-30 from-charcoal/40 via-secondary-magenta-100/30 to-charcoal/40 backdrop-blur-sm
-                border border-secondary-magenta-500/80 hover:border-primary-magenta-500/35 transition-all duration-300 shadow-md shadow-zinc-950/70">
-                    <h3 className='info-title font-body-ff relative text-desktop-lg-body'>Hobbies</h3>
-                    <p className='info-text font-body-ff text-mobile-body md:text-desktop-body'>I enjoy chess, video games, and exploring the outdoors through hiking, fishing, 
-                      and travel. I'm also into astronomy and astrophotography, and I spend a lot of time reading and learning new things to expand my knowledge.
-                    </p>
-                </div>
-
-                <div id="future" className="info-container bg-linear-30 from-charcoal/40 via-secondary-magenta-100/30 to-charcoal/40 backdrop-blur-sm
-                border border-secondary-magenta-500/80 hover:border-primary-magenta-500/35 transition-all duration-300 shadow-md shadow-zinc-950/70">
-                    <h3 className='info-title font-body-ff relative text-desktop-lg-body'>Future Goals</h3>
-                    <p className='info-text font-body-ff text-mobile-body md:text-desktop-body'>I am currently working on a few personal projects that I hope to launch in the near future. I am also looking for opportunities to collaborate with other developers and designers.</p>
-                </div>
-
-                <div id="why" className="info-container bg-linear-30 from-charcoal/40 via-secondary-magenta-100/30 to-charcoal/40 backdrop-blur-sm
-                border border-secondary-magenta-500/80 hover:border-primary-magenta-500/35 transition-all duration-300 shadow-md shadow-zinc-950/70">
-                    <h3 className='info-title font-body-ff relative text-desktop-lg-body'>Why Web Development?</h3>
-                    <p className='info-text font-body-ff text-mobile-body md:text-desktop-body'>I love web development because it allows me to combine my creativity with my technical skills. I enjoy the challenge of solving complex problems and creating innovative solutions.</p>
-                </div>
-
+              ))}
             </div>
-
+            
         </section>
 
     )

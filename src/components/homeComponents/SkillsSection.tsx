@@ -267,12 +267,12 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
         Skills
       </h2>
 
-      <div id='main-skills-container' className='px-8 h-fit w-full md:w-4/5 z-0'>
+      <div className='px-8 h-fit w-full z-0 flex flex-wrap justify-center md:gap-8 gap-4 items-center my-auto xl:flex-row flex-col'>
         <div
-          id='front-end-container'
-          className='secondary-container h-auto p-8 flex flex-col gap-6 items-center backdrop-blur-sm bg-linear-210 from-secondary-blue-300/50 to-secondary-charcoal/80
-          border border-secondary-blue-500/50 hover:border-secondary-blue-500/100 transition-all duration-300 shadow-md shadow-zinc-950/70'>
-          <h3 className='container-title font-body-ff relative text-desktop-lg-body'>
+          className='h-auto p-8 flex flex-col gap-6 items-center backdrop-blur-sm bg-linear-210 from-secondary-blue-300/50 to-secondary-charcoal/80
+          border border-blue-950/70 hover:border-blue-900/70 transition-all duration-300 shadow-zinc-950/70 xl:w-[28%]
+          rounded-br-2xl rounded-tl-2xl'>
+          <h3 className='skill-card-title font-body-ff relative text-desktop-lg-body'>
             Front End
           </h3>
           <div className='skills-container flex gap-8 flex-wrap justify-center items-center w-full h-auto'>
@@ -290,10 +290,10 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
         </div>
 
         <div
-          id='back-end-container'
-          className='secondary-container h-auto p-8 flex flex-col gap-6 items-center backdrop-blur-sm bg-linear-210 from-secondary-blue-300/50 to-secondary-charcoal/80
-          border border-secondary-blue-500/50 hover:border-secondary-blue-500/100 transition-all duration-300 shadow-zinc-950/70'>
-          <h3 className='container-title font-body-ff relative text-desktop-lg-body'>
+          className='h-auto p-8 flex flex-col gap-6 items-center backdrop-blur-sm bg-linear-210 from-secondary-blue-300/50 to-secondary-charcoal/80
+          border border-blue-950/70 hover:border-blue-900/70 transition-all duration-300 shadow-zinc-950/70 xl:w-[28%]
+          rounded-br-2xl rounded-tl-2xl'>
+          <h3 className='skill-card-title font-body-ff relative text-desktop-lg-body'>
             Back End
           </h3>
           <div className='skills-container flex gap-8 flex-wrap justify-center items-center w-full h-auto'>
@@ -311,10 +311,10 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
         </div>
 
         <div
-          id='tools-container'
-          className='secondary-container h-auto p-8 flex flex-col gap-6 items-center backdrop-blur-sm bg-linear-210 from-secondary-blue-300/50 to-secondary-charcoal/80
-          border border-secondary-blue-500/50 hover:border-secondary-blue-500/100 transition-all duration-300 shadow-zinc-950/70'>
-          <h3 className='container-title font-body-ff relative text-desktop-lg-body'>
+          className='h-auto p-8 flex flex-col gap-6 items-center backdrop-blur-sm bg-linear-210 from-secondary-blue-300/50 to-secondary-charcoal/80
+          border border-blue-950/70 hover:border-blue-900/70 transition-all duration-300 shadow-zinc-950/70 xl:w-[28%]
+          rounded-br-2xl rounded-tl-2xl'>
+          <h3 className='skill-card-title font-body-ff relative text-desktop-lg-body'>
             Tools
           </h3>
           <div className='skills-container flex gap-8 flex-wrap justify-center items-center w-full h-auto'>
@@ -332,10 +332,10 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
         </div>
 
         <div
-          id='design-container'
-          className='secondary-container h-auto p-8 flex flex-col gap-6 items-center backdrop-blur-sm bg-linear-210 from-secondary-blue-300/50 to-secondary-charcoal/80
-          border border-secondary-blue-500/50 hover:border-secondary-blue-500/100 transition-all duration-300 shadow-zinc-950/70'>
-          <h3 className='container-title font-body-ff relative text-desktop-lg-body'>
+          className='h-fit p-8 flex flex-col gap-6 items-center backdrop-blur-sm bg-linear-210 from-secondary-blue-300/50 to-secondary-charcoal/80
+          border border-blue-950/70 hover:border-blue-900/70 transition-all duration-300 shadow-zinc-950/70 w-fit
+          rounded-br-2xl rounded-tl-2xl'>
+          <h3 className='skill-card-title font-body-ff relative text-desktop-lg-body'>
             Design
           </h3>
           <div className='skills-container flex gap-8 flex-wrap justify-center items-center w-full h-auto'>

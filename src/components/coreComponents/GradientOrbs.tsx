@@ -2,7 +2,7 @@ import './GradientOrbs.css';
 
 export default function GradientOrbs() {
     return (
-        <div className="absolute w-full h-[90svh]">
+        <div className="absolute w-full h-[80svh]">
             {[...Array(15)].map((_, i) => {
                 const randomX = Math.floor(Math.random() * 100);
                 const randomY = Math.floor(Math.random() * 100);
