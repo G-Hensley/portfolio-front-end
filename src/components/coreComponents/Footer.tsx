@@ -125,7 +125,8 @@ export default function Footer({ children }: { children: React.ReactNode }) {
 
   return (
     <footer
-      className='bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 py-6 relative pb-12 text-primary-cyan-900 w-full'
+      className='bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 py-6 relative pb-12 text-primary-cyan-900 w-full
+      bg-linear-120 from-charcoal/50 via-secondary-blue-500/60 to-charcoal/50 backdrop-blur-sm'
       id='footer'
       role='contentinfo'
       aria-label='Footer with contact form and social links'>
@@ -285,12 +286,15 @@ export default function Footer({ children }: { children: React.ReactNode }) {
 
       <p
         id='copyright'
-        className='absolute bottom-0 text-md text-primary-magenta-900 font-body-ff w-full text-center bg-charcoal py-2'>
+        className='absolute bottom-0 text-md text-primary-cyan-700 font-body-ff w-full text-center py-4'>
         © {year}{' '}
         <a
-          className='underline hover:text-primary-magenta-700 transition-colors duration-200'
+          className='underline hover:text-primary-cyan-500 transition-colors duration-200'
           href='https://github.com/G-Hensley/'
-          aria-label="Gavin Hensley's GitHub profile">
+          aria-label="Gavin Hensley's GitHub profile"
+          target='_blank'
+          rel='noopener noreferrer'
+          referrerPolicy='no-referrer'>
           Gavin Hensley
         </a>
         . All Rights Reserved.

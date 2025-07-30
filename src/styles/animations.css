@@ -17,61 +17,61 @@
 /* Glow Pulse Animation */
 @keyframes cyberpunk-glow {
     0% {
-        box-shadow: 0 0 8px rgba(0, 255, 246, 0.8), 0 0 16px rgba(255, 0, 246, 0.8);
+        box-shadow: 0 0 5px rgba(0, 255, 246, 0.8), 0 0 10px rgba(255, 0, 246, 0.8);
     }
     50% {
-        box-shadow: 0 0 18px rgb(16, 116, 91), 0 0 36px rgba(255, 0, 246, 1);
+        box-shadow: 0 0 12px rgb(16, 116, 91), 0 0 20px rgba(255, 0, 246, 1);
     }
     100% {
-        box-shadow: 0 0 8px rgba(0, 255, 246, 0.8), 0 0 16px rgba(255, 0, 246, 0.8);
+        box-shadow: 0 0 5px rgba(0, 255, 246, 0.8), 0 0 10px rgba(255, 0, 246, 0.8);
     }
 }
 
 @keyframes h1-glow {
     0% {
-        text-shadow:0 0 35px var(--color-primary-magenta-700), 0 0 80px var(--color-primary-purple-700);
+        text-shadow:0 0 15px var(--color-primary-magenta-700), 0 0 30px var(--color-primary-purple-700);
     }
     50% {
-        text-shadow:0 0 5px var(--color-primary-magenta-700), 0 0 20px var(--color-primary-purple-700);
+        text-shadow:0 0 5px var(--color-primary-magenta-700), 0 0 15px var(--color-primary-purple-700);
     }
     100% {
-        text-shadow:0 0 35px var(--color-primary-magenta-700), 0 0 80px var(--color-primary-purple-700);
+        text-shadow:0 0 15px var(--color-primary-magenta-700), 0 0 30px var(--color-primary-purple-700);
     }
 }
 
 @keyframes h2-glow {
     0% {
-        text-shadow:0 0 35px var(--color-primary-cyan-700), 0 0 60px var(--color-primary-cyan-700);
+        text-shadow:0 0 10px var(--color-primary-cyan-700), 0 0 20px var(--color-primary-cyan-700);
     }
     50% {
-        text-shadow:0 0 5px var(--color-primary-cyan-700), 0 0 20px var(--color-primary-cyan-700);
+        text-shadow:0 0 5px var(--color-primary-cyan-700), 0 0 10px var(--color-primary-cyan-700);
     }
     100% {
-        text-shadow:0 0 35px var(--color-primary-cyan-700), 0 0 60px var(--color-primary-cyan-700);
+        text-shadow:0 0 10px var(--color-primary-cyan-700), 0 0 20px var(--color-primary-cyan-700);
     }
 }
 
 @keyframes alt-text-glow {
     0% {
-        text-shadow:0 0 50px var(--color-primary-magenta-700), 0 0 80px var(--color-primary-magenta-700);
+        text-shadow:0 0 20px var(--color-primary-magenta-700), 0 0 40px var(--color-primary-magenta-700);
     }
     50% {
-        text-shadow:0 0 20px var(--color-primary-magenta-700), 0 0 45px var(--color-primary-magenta-700);
+        text-shadow:0 0 10px var(--color-primary-magenta-700), 0 0 25px var(--color-primary-magenta-700);
     }
     100% {
-        text-shadow:0 0 50px var(--color-primary-magenta-700), 0 0 80px var(--color-primary-magenta-700);
+        text-shadow:0 0 20px var(--color-primary-magenta-700), 0 0 40px var(--color-primary-magenta-700);
     }
 }
 
 @keyframes skills-glow {
     0% {
-        filter: blur(14px);
+        filter: blur(10px);
     }
     50% {
-        filter: blur(8px);
+        filter: blur(6px);
     }
     100% {
-        filter: blur(14px);
+        filter: blur(10px);
     }
 }
 

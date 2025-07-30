@@ -6,7 +6,6 @@
   mask: linear-gradient(0deg, rgb(0, 0, 0) 10%, transparent 70%);
   overflow: hidden;
   perspective: 200px;
-  position: absolute;
   width: 100%;
 }
   
