@@ -17,7 +17,7 @@ export default function ProjectModal( {image, title, description, link, skills, 
         <img src={image} alt={title} className="w-full h-56 sm:h-84 object-cover rounded-t-lg border-b border-cyan-950" />
         <h2 className="text-3xl font-bold">{title}</h2>
         <div className="flex gap-4 w-full px-4 pt-4 pb-2 md:flex-row flex-col items-center">
-          <div className="flex flex-col justify-self-start gap-2 md:items-start items-center md:min-w-1/2">
+          <div className="flex flex-col justify-self-start gap-2 md:items-start items-center md:max-w-3/5">
             <p className="text-cyan-600 font-body-ff md:text-lg">{description}</p>
             <a href={link} target="_blank" rel="noopener noreferrer" className="text-cyan-400 border w-fit px-4 py-2 bg-secondary-blue-300
               text-base font-h2-ff hover:bg-secondary-blue-500 hover:text-cyan-300 transition-all duration-200 active:scale-95 rounded-tl-lg rounded-br-lg">
