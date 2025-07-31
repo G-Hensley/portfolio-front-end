@@ -7,6 +7,7 @@ import SkillsSection from '../components/homeComponents/SkillsSection';
 import './HomePage.css';
 import Footer from '../components/coreComponents/Footer';
 import AboutSection from '../components/homeComponents/AboutSection';
+import { motion } from 'framer-motion';
 
 export default function HomePage() {
   // State management for the nav menu button
@@ -28,13 +29,17 @@ export default function HomePage() {
   }, []);
 
   return (
-    <div id='wrapper' className='flex flex-col'>
+    <motion.div id='wrapper' className='flex flex-col'
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+      viewport={{ once: true }}>
       <Navbar menuOpen={menuOpen} onToggleMenu={toggleMenu} />
       <MouseFollower />
       <HeroSection>{menuOpen && <ScreenCover />}</HeroSection>
       <SkillsSection>{menuOpen && <ScreenCover />}</SkillsSection>
       <AboutSection>{menuOpen && <ScreenCover />}</AboutSection>
       <Footer>{menuOpen && <ScreenCover />}</Footer>
-    </div>
+    </motion.div>
   );
 }

@@ -229,6 +229,7 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
                     return (
                         <ProjectCard
                             key={project.key}
+                            index={projects.indexOf(project)}
                             title={project.title}
                             image={project.image}
                             description={project.description}

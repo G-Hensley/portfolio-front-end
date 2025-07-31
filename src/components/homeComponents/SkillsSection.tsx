@@ -32,6 +32,7 @@ import { GithubLogo } from '@phosphor-icons/react';
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from 'framer-motion';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -267,7 +268,11 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
         Skills
       </h2>
 
-      <div className='px-8 h-fit w-full z-0 flex flex-wrap justify-center md:gap-8 gap-4 items-center my-auto xl:flex-row flex-col'>
+      <motion.div className='px-8 h-fit w-full z-0 flex flex-wrap justify-center md:gap-8 gap-4 items-center my-auto xl:flex-row flex-col'
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: 'easeInOut' }}
+        viewport={{ once: true }}>
         <div
           className='h-auto p-8 flex flex-col gap-6 items-center backdrop-blur-sm bg-linear-210 from-secondary-blue-300/50 to-secondary-charcoal/80
           border border-blue-950/70 hover:border-blue-900/70 transition-all duration-300 shadow-zinc-950/70 xl:w-[28%]
@@ -339,7 +344,7 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

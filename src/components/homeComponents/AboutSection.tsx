@@ -2,6 +2,7 @@ import './AboutSection.css';
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion } from 'framer-motion';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,7 +66,11 @@ export default function AboutSection( { children }: { children: React.ReactNode 
 
             <h2 id="abt-section-title" className='font-h2-ff md:mt-16 text-mobile-h2 md:text-desktop-h2'>About Me</h2>
 
-            <div className='flex w-full justify-center flex-wrap gap-4 md:gap-8 my-auto md:flex-row flex-col'>
+            <motion.div className='flex w-full justify-center flex-wrap gap-4 md:gap-8 my-auto md:flex-row flex-col'
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: 'easeInOut' }}
+              viewport={{ once: true }}>
               { aboutContent.map((item, index) => (
                 <div key={index} className='bg-linear-150 from-secondary-magenta-100/20 via-secondary-magenta-500/40 to-secondary-magenta-100/20 flex flex-col gap-2 2xl:w-1/3
                 p-4 rounded-br-2xl rounded-tl-2xl backdrop-blur-md border-[1.5px] border-secondary-magenta-500 hover:border-fuchsia-900
@@ -74,7 +79,7 @@ export default function AboutSection( { children }: { children: React.ReactNode 
                   <p className='font-body-ff text-lg text-fuchsia-400'>{item.text}</p>
                 </div>
               ))}
-            </div>
+            </motion.div>
             
         </section>
 

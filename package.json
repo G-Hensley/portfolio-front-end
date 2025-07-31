@@ -10,12 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@phosphor-icons/react": "^2.1.7",
     "@tailwindcss/vite": "^4.0.8",
     "boxicons": "^2.1.4",
+    "framer-motion": "^12.23.12",
     "gsap": "^3.12.7",
     "react": "^19.0.0",
     "react-boxicons": "^0.0.26",
@@ -24,8 +26,7 @@
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.2.0",
     "react-type-animation": "^3.2.0",
-    "uuid": "^11.1.0",
-    "@emailjs/browser": "^4.4.1"
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

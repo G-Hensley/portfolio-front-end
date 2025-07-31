@@ -9,6 +9,7 @@ import { IoLogoVercel } from 'react-icons/io5';
 // import { SiPrisma, SiExpress } from "react-icons/si";
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
 
 export default function Footer({ children }: { children: React.ReactNode }) {
 
@@ -124,12 +125,16 @@ export default function Footer({ children }: { children: React.ReactNode }) {
   ];
 
   return (
-    <footer
+    <motion.footer
       className='bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 pt-2 relative pb-12 text-primary-cyan-900 w-full
       bg-linear-120 from-charcoal/50 via-secondary-blue-500/60 to-charcoal/50 backdrop-blur-sm'
       id='footer'
       role='contentinfo'
-      aria-label='Footer with contact form and social links'>
+      aria-label='Footer with contact form and social links'
+      initial={{ opacity: 0, x: -50 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 1, ease: 'easeInOut' }}
+      viewport={{ once: true }}>
       {children}
 
       <section
@@ -299,6 +304,6 @@ export default function Footer({ children }: { children: React.ReactNode }) {
         </a>
         . All Rights Reserved.
       </p>
-    </footer>
+    </motion.footer>
   );
 }
