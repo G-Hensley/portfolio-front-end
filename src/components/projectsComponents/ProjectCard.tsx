@@ -35,7 +35,7 @@ export default function ProjectCard({
           skills,
         });
       }}>
-      <img src={image} alt={title} className='h-full object-cover rounded-tr-lg border-b border-cyan-900 w-full' />
+      <img src={image} alt={title} className='h-full object-cover rounded-tr-lg border-b border-cyan-900 w-full overflow-hidden' />
       <div className='py-1 backdrop-blur-md w-full text-center rounded-bl-lg'>
         <h3 className='font-h2-ff text-lg md:text-xl project-card-title text-primary-cyan-700'>{title}</h3>
       </div>

@@ -6,7 +6,7 @@ import "./ProjectsContainer.css";
 import renaeeWebsite from "../../assets/images/cybersecurity-portfolio.webp";
 import spaceWebsite from "../../assets/images/Screenshot 2025-02-28 143720.png";
 import reactPasswordGenerator from "../../assets/images/react-password-generator.webp";
-import reactNoteApp from "../../assets/images/react-note-app.webp";
+import reactNoteApp from "../../assets/images/react-note-app.png";
 import expenseTracker from "../../assets/images/expense-tracker.webp";
 import reactToDoApp from "../../assets/images/react-todo-app.webp";
 import bookmarkManager from "../../assets/images/bookmark-manager.webp";
