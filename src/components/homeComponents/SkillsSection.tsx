@@ -277,14 +277,11 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
           </h3>
           <div className='skills-container flex gap-8 flex-wrap justify-center items-center w-full h-auto'>
             {frontEndSkills.map((skill, index) => (
-              <a
+              <div
                 key={index}
-                href={skill.link}
-                target='_blank'
-                rel='noopener noreferrer'
                 className='skill-link'>
                 {skill.icon}
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -298,14 +295,11 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
           </h3>
           <div className='skills-container flex gap-8 flex-wrap justify-center items-center w-full h-auto'>
             {backEndSkills.map((skill, index) => (
-              <a
+              <div
                 key={index}
-                href={skill.link}
-                target='_blank'
-                rel='noopener noreferrer'
                 className='skill-link'>
                 {skill.icon}
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -319,14 +313,11 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
           </h3>
           <div className='skills-container flex gap-8 flex-wrap justify-center items-center w-full h-auto'>
             {toolsSkills.map((skill, index) => (
-              <a
+              <div
                 key={index}
-                href={skill.link}
-                target='_blank'
-                rel='noopener noreferrer'
                 className='skill-link'>
                 {skill.icon}
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -340,14 +331,11 @@ export default function SkillsSection(props: { children: React.ReactNode }) {
           </h3>
           <div className='skills-container flex gap-8 flex-wrap justify-center items-center w-full h-auto'>
             {designSkills.map((skill, index) => (
-              <a
+              <div
                 key={index}
-                href={skill.link}
-                target='_blank'
-                rel='noopener noreferrer'
                 className='skill-link'>
                 {skill.icon}
-              </a>
+              </div>
             ))}
           </div>
         </div>

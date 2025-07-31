@@ -72,7 +72,7 @@ export default function HeroSection({
         <TypeAnimation
           sequence={typingSequence}
           repeat={Infinity}
-          className='type-animation font-body-ff text-desktop-lg-body md:text-mobile-h2 relative md:w-1/2 -top-4 md:top-0'
+          className='type-animation font-body-ff relative md:w-1/2 -top-4 md:top-0 text-xl lg:text-2xl'
           speed={35}
           aria-label='Rotating role descriptions: Full Stack Engineer, Prompt Engineer, Gamer, Chess Enthusiast, Web Designer, WGU SWE Student'
         />
