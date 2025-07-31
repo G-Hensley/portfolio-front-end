@@ -26,7 +26,7 @@ export default function ProjectCard({
   }) => void;
 }) {
 
-  const motionDelay = index * 0.3;
+  const motionDelay = index * 0.1;
 
   return (
     <motion.div className='group relative flex flex-col items-center rounded-tr-xl rounded-bl-xl shadow-lg shadow-black/40 hover:shadow-xl 2xl:w-[21%]

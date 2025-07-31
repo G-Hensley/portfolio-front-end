@@ -25,7 +25,7 @@ export default function HeroSection({
     2000,
     'Web Designer',
     2000,
-    'WGU SWE Student',
+    'WGU SWE Alumni',
     2000,
   ];
 
