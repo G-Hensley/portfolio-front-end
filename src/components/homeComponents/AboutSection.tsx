@@ -68,10 +68,10 @@ export default function AboutSection( { children }: { children: React.ReactNode 
             <div className='flex w-full justify-center flex-wrap gap-4 md:gap-8 my-auto md:flex-row flex-col'>
               { aboutContent.map((item, index) => (
                 <div key={index} className='bg-linear-150 from-secondary-magenta-100/20 via-secondary-magenta-500/40 to-secondary-magenta-100/20 flex flex-col gap-2 2xl:w-1/3
-                p-4 rounded-br-2xl rounded-tl-2xl backdrop-blur-sm border-[1.5px] border-secondary-magenta-500 hover:border-fuchsia-900
+                p-4 rounded-br-2xl rounded-tl-2xl backdrop-blur-md border-[1.5px] border-secondary-magenta-500 hover:border-fuchsia-900
                 transition-all duration-300 shadow-md shadow-zinc-950/70 lg:w-2/5'>
                   <h3 className='text-center font-body-ff about-card-title text-2xl'>{item.title}</h3>
-                  <p className='font-body-ff text-lg text-fuchsia-400/80'>{item.text}</p>
+                  <p className='font-body-ff text-lg text-fuchsia-400'>{item.text}</p>
                 </div>
               ))}
             </div>
