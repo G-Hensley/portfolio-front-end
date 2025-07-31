@@ -76,7 +76,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
       icon: (
         <FontAwesomeIcon
           icon={faReact}
-          className='skill-icon text-4xl md:text-5xl'
+          className='skill-icon text-4xl'
         />
       ),
       link: 'https://react.dev/',
@@ -86,19 +86,19 @@ export default function Footer({ children }: { children: React.ReactNode }) {
     // { icon: <BiLogoPostgresql className="skill-icon text-4xl md:text-5xl" />, link: "https://www.postgresql.org/", label: "PostgreSQL" },
     // { icon: <SiPrisma className="skill-icon text-4xl md:text-5xl" />, link: "https://www.prisma.io/", label: "Prisma" },
     {
-      icon: <BiLogoTypescript className='skill-icon text-4xl md:text-5xl' />,
+      icon: <BiLogoTypescript className='skill-icon text-4xl' />,
       link: 'https://www.typescriptlang.org/',
       label: 'TypeScript',
     },
     {
-      icon: <BiLogoTailwindCss className='skill-icon text-4xl md:text-5xl' />,
+      icon: <BiLogoTailwindCss className='skill-icon text-4xl' />,
       link: 'https://tailwindcss.com/',
       label: 'Tailwind CSS',
     },
     // { icon: <BiLogoGraphql className="skill-icon text-4xl md:text-5xl" />, link: "https://graphql.org/", label: "GraphQL" },
     // { icon: <BiLogoHeroku className="skill-icon text-4xl md:text-5xl" />, link: "https://www.heroku.com/", label: "Heroku" },
     {
-      icon: <IoLogoVercel className='skill-icon text-4xl md:text-5xl' />,
+      icon: <IoLogoVercel className='skill-icon text-4xl' />,
       link: 'https://vercel.com/',
       label: 'Vercel',
     },
@@ -107,17 +107,17 @@ export default function Footer({ children }: { children: React.ReactNode }) {
 
   const socialIcons = [
     {
-      icon: <GithubLogo className='skill-icon text-4xl md:text-5xl' />,
+      icon: <GithubLogo className='skill-icon text-4xl' />,
       link: 'https://github.com/G-Hensley/',
       label: 'GitHub',
     },
     {
-      icon: <LinkedinLogo className='skill-icon text-4xl md:text-5xl' />,
+      icon: <LinkedinLogo className='skill-icon text-4xl' />,
       link: 'https://linkedin.com/in/g-hensley/',
       label: 'LinkedIn',
     },
     {
-      icon: <XLogo className='skill-icon text-4xl md:text-5xl' />,
+      icon: <XLogo className='skill-icon text-4xl' />,
       link: 'https://x.com/GavinHensleyDev',
       label: 'X',
     },
@@ -125,7 +125,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
 
   return (
     <footer
-      className='bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 py-6 relative pb-12 text-primary-cyan-900 w-full
+      className='bottom-0 flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-32 pt-2 relative pb-12 text-primary-cyan-900 w-full
       bg-linear-120 from-charcoal/50 via-secondary-blue-500/60 to-charcoal/50 backdrop-blur-sm'
       id='footer'
       role='contentinfo'
@@ -138,7 +138,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
         aria-labelledby='tech-stack-title'>
         <h3
           id='tech-stack-title'
-          className='footer-title text-mobile-lg-body md:text-desktop-lg-body'>
+          className='footer-title text-lg md:text-2xl'>
           Tech Stack
         </h3>
 
@@ -162,7 +162,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
         aria-labelledby='contact-title'>
         <h3
           id='contact-title'
-          className='footer-title text-mobile-lg-body md:text-desktop-lg-body'>
+          className='footer-title text-xl md:text-2xl'>
           Contact Me
         </h3>
 
@@ -177,7 +177,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
             <div className='input-container flex flex-col'>
               <label
                 htmlFor='name'
-                className='font-body-ff md:text-desktop-body'>
+                className='font-body-ff text-base md:text-lg'>
                 Name:
               </label>
               <input
@@ -198,7 +198,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
             <div className='input-container flex flex-col'>
               <label
                 htmlFor='email'
-                className='font-body-ff md:text-desktop-body'>
+                className='font-body-ff text-base md:text-lg'>
                 Email:
               </label>
               <input
@@ -220,7 +220,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
             <div className='input-container flex flex-col w-full'>
               <label
                 htmlFor='message'
-                className='font-body-ff md:text-desktop-body'>
+                className='font-body-ff text-base md:text-lg'>
                 Message:
               </label>
               <textarea
@@ -230,7 +230,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
                 onChange={handleChange}
                 className='contact-input'
                 placeholder='Your Message Here...'
-                rows={4}
+                rows={3}
                 required
                 aria-required='true'
                 aria-invalid={formData.message === '' ? 'true' : 'false'}
@@ -266,7 +266,7 @@ export default function Footer({ children }: { children: React.ReactNode }) {
         aria-labelledby='social-title'>
         <h3
           id='social-title'
-          className='footer-title text-mobile-lg-body md:text-desktop-lg-body'>
+          className='footer-title text-lg md:text-2xl'>
           Social
         </h3>
 

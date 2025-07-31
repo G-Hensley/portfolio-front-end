@@ -15,7 +15,7 @@ export default function HeroSection({
   children: React.ReactNode;
 }) {
   const typingSequence = [
-    'Full Stack Engineer',
+    'Full-Stack Software Engineer',
     2000,
     'Prompt Engineer',
     2000,

@@ -1,70 +1,48 @@
+import { ReactElement } from 'react';
 import './ProjectCard.css';
-import React from 'react';
 
 export default function ProjectCard({
   title,
   image,
+  description,
   link,
   skills,
-  description,
+  openModal,
 }: {
   title: string;
   image: string;
-  link: string;
-  skills: React.ReactNode[];
   description: string;
+  link: string;
+  skills: ReactElement[];
+  openModal: (project: {
+    image: string;
+    title: string;
+    description: string;
+    link: string;
+    skills: ReactElement[];
+  }) => void;
 }) {
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      window.open(link, '_blank', 'noopener,noreferrer');
-    }
-  };
 
   return (
-    <div
-      className='project-card relative w-full sm:w-4/5 lg:w-[45%] 2xl:w-[31%] sm:py-0 flex flex-col'
-      tabIndex={0}
-      onKeyDown={handleKeyDown}
-      role='article'
-      aria-label={`Project: ${title}`}>
-      <div className='image-container relative w-full aspect-[16/9] overflow-hidden'>
-        <img
-          className='absolute w-full h-full object-cover'
-          src={image}
-          alt={`Screenshot of ${title} project`}
-        />
+    <div className='group relative flex flex-col items-center rounded-tr-xl rounded-bl-xl shadow-lg shadow-black/40 hover:shadow-xl transition-all duration-300 2xl:w-[21%]
+      border-2 border-cyan-900 cursor-pointer hover:scale-[1.02] hover:border-cyan-700 active:scale-100 w-full sm:w-3/5 md:w-[45%] lg:w-1/3 h-64 md:h-76'
+      onClick={() => {
+        openModal({
+          image,
+          title,
+          description,
+          link,
+          skills,
+        });
+      }}>
+      <img src={image} alt={title} className='h-full object-cover rounded-tr-lg border-b border-cyan-900 w-full' />
+      <div className='py-1 backdrop-blur-md w-full text-center rounded-bl-lg'>
+        <h3 className='font-h2-ff text-lg md:text-xl project-card-title text-primary-cyan-700'>{title}</h3>
       </div>
-      <div className='bg-black project-details flex justify-center py-2 sm:py-4 px-2 relative project-title-container'>
-        <h2 className='project-title text-mobile-body sm:text-mobile-lg-body lg:text-desktop-lg-body font-h2-ff text-center'>
-          {title}
-        </h2>
+      <div className="hidden absolute top-0 left-0 w-full h-full bg-black/60 backdrop-blur-md group-hover:flex rounded-bl-lg rounded-tr-lg
+        transition-all duration-200 justify-center items-center">
+        <button className='animate-bounce font-h2-ff text-2xl text-primary-magenta-900 glow-text cursor-pointer'>Click To Open</button>
       </div>
-      <a
-        href={link}
-        target='_blank'
-        rel='noopener noreferrer'
-        className='project-info-container items-center justify-center flex-col gap-3 h-full w-full absolute left-0 top-0 p-2'
-        aria-label={`View ${title} project`}
-        tabIndex={-1} // Focus will be handled by the parent div for better accessibility
-      >
-        <p className='project-description text-[1rem] sm:text-desktop-body font-body-ff text-center relative text-primary-cyan-900'>
-          {description}
-        </p>
-        <p className='tools-used text-primary-magenta-700 text-[1rem] sm:text-desktop-body font-h2-ff text-center relative'>
-          Tools Used
-        </p>
-        <div
-          className='project-skills-container flex flex-wrap gap-4 justify-center relative'
-          aria-label='Project technologies'>
-          {skills.map((skill, index) => {
-            return <React.Fragment key={index}>{skill}</React.Fragment>;
-          })}
-        </div>
-        <p className='click-to-view animate-bounce text-primary-cyan-900 text-[1rem] sm:text-desktop-body font-h2-ff text-center relative w-full'>
-          Click to View Project
-        </p>
-      </a>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import GradientOrbs from "../coreComponents/GradientOrbs";
 import { v4 as uuidv4 } from 'uuid';
 import ProjectCard from "./ProjectCard";
+import { ReactElement, useState } from "react";
 import "./ProjectsContainer.css";
 import renaeeWebsite from "../../assets/images/cybersecurity-portfolio.webp";
 import spaceWebsite from "../../assets/images/Screenshot 2025-02-28 143720.png";
@@ -33,8 +34,34 @@ import {
 // import { VscVscode } from 'react-icons/vsc';
 // import { IoLogoVercel, IoLogoGitlab } from 'react-icons/io5';
 // import { GithubLogo } from '@phosphor-icons/react';
+import ProjectModal from "./ProjectModal";
 
 export default function ProjectsContainer( {children}: {children: React.ReactNode} ) {
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedProject, setSelectedProject] = useState<{
+        image: string;
+        title: string;
+        description: string;
+        link: string;
+        skills: ReactElement[];
+    } | null>(null);
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+        setSelectedProject(null);
+    };
+    
+    const openModal = (project: {
+        image: string;
+        title: string;
+        description: string;
+        link: string;
+        skills: ReactElement[];
+    }) => {
+        setSelectedProject(project);
+        setIsModalOpen(true);
+    };
 
     const projects = [
         {
@@ -44,13 +71,13 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://secure-expense-tracker-front-end.vercel.app/",
             description: "Full stack expense tracker built with Next.js, React, TypeScript, Tailwind, and MongoDB.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-3xl md:text-6xl" />,   
-                <IoLogoNodejs className="project-skill text-3xl md:text-6xl" />,
-                <BiLogoTypescript className="project-skill text-3xl md:text-6xl" />,
-                <RiTailwindCssFill className="project-skill text-3xl md:text-6xl" />,
-                <SiMongodb className="project-skill text-3xl md:text-6xl" />,
-                <SiExpress className="project-skill text-3xl md:text-6xl" />,
-                <BiLogoGraphql className="project-skill text-3xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="text-3xl md:text-5xl" />,   
+                <IoLogoNodejs className="text-3xl md:text-5xl" />,
+                <BiLogoTypescript className="text-3xl md:text-5xl" />,
+                <RiTailwindCssFill className="text-3xl md:text-5xl" />,
+                <SiMongodb className="text-3xl md:text-5xl" />,
+                <SiExpress className="text-3xl md:text-5xl" />,
+                <BiLogoGraphql className="text-3xl md:text-5xl" />,
             ]
         },
         {
@@ -60,11 +87,11 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://github.com/G-Hensley/quickstock.git",
             description: "Full stack inventory management system built with React, TypeScript, Tailwind, and MongoDB.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-3xl md:text-6xl" />,
-                <BiLogoTypescript className="project-skill text-3xl md:text-6xl" />,
-                <RiTailwindCssFill className="project-skill text-3xl md:text-6xl" />,
-                <SiExpress className="project-skill text-3xl md:text-6xl" />,
-                <BiLogoPostgresql className="project-skill text-3xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="text-3xl md:text-5xl" />,
+                <BiLogoTypescript className="text-3xl md:text-5xl" />,
+                <RiTailwindCssFill className="text-3xl md:text-5xl" />,
+                <SiExpress className="text-3xl md:text-5xl" />,
+                <BiLogoPostgresql className="text-3xl md:text-5xl" />,
             ]
         },
         {
@@ -74,9 +101,9 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://brendahensley.tech",
             description: "Custom personal front end portfolio built for my wife, to showcase her cyberseucrity skills.",
             skills: [
-                <IoLogoHtml5 className="project-skill text-3xl md:text-6xl" />,
-                <IoLogoCss3 className="project-skill text-3xl md:text-6xl" />,
-                <BiLogoJavascript className="project-skill text-3xl md:text-6xl" />,
+                <IoLogoHtml5 className="text-3xl md:text-5xl" />,
+                <IoLogoCss3 className="text-3xl md:text-5xl" />,
+                <BiLogoJavascript className="text-3xl md:text-5xl" />,
             ]
         },
         {
@@ -86,9 +113,9 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://nextjs-todo-list-tau-topaz.vercel.app/",
             description: "Front end to do app built with React.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-3xl md:text-6xl" />,
-                <BiLogoTypescript className="project-skill text-3xl md:text-6xl" />,
-                <RiTailwindCssFill className="project-skill text-3xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="text-3xl md:text-5xl" />,
+                <BiLogoTypescript className="text-3xl md:text-5xl" />,
+                <RiTailwindCssFill className="text-3xl md:text-5xl" />,
             ]
         },
         {
@@ -98,9 +125,9 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://g-hensley.github.io/earths-orbit/",
             description: "Front end solar system simulation built with HTML, CSS, and JavaScript.",
             skills: [
-                <IoLogoHtml5 className="project-skill text-3xl md:text-6xl" />,
-                <IoLogoCss3 className="project-skill text-3xl md:text-6xl" />,
-                <BiLogoJavascript className="project-skill text-3xl md:text-6xl" />,
+                <IoLogoHtml5 className="text-3xl md:text-5xl" />,
+                <IoLogoCss3 className="text-3xl md:text-5xl" />,
+                <BiLogoJavascript className="text-3xl md:text-5xl" />,
             ]
         },
         {
@@ -110,9 +137,9 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://react-password-generator-opal.vercel.app/",
             description: "Front end password generator built with React.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-3xl md:text-6xl" />,
-                <BiLogoTypescript className="project-skill text-3xl md:text-6xl" />,
-                <RiTailwindCssFill className="project-skill text-3xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="text-3xl md:text-5xl" />,
+                <BiLogoTypescript className="text-3xl md:text-5xl" />,
+                <RiTailwindCssFill className="text-3xl md:text-5xl" />,
             ]
         },
         {
@@ -122,9 +149,9 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://notes-app-seven-orcin.vercel.app/",
             description: "Front end note taking app built with React that saves to local storage.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-3xl md:text-6xl" />,
-                <BiLogoJavascript className="project-skill text-3xl md:text-6xl" />,
-                <IoLogoCss3 className="project-skill text-3xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="text-3xl md:text-5xl" />,
+                <BiLogoJavascript className="text-3xl md:text-5xl" />,
+                <IoLogoCss3 className="text-3xl md:text-5xl" />,
             ]
         },
         {
@@ -134,35 +161,47 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
             link: "https://github.com/G-Hensley/react-bookmark-manager.git",
             description: "Front end bookmark manager built with React.",
             skills: [
-                <FontAwesomeIcon icon={faReact} className="project-skill text-4xl md:text-6xl" />,
-                <BiLogoTypescript className="project-skill text-3xl md:text-6xl" />,
-                <RiTailwindCssFill className="project-skill text-3xl md:text-6xl" />,
+                <FontAwesomeIcon icon={faReact} className="text-3xl md:text-5xl" />,
+                <BiLogoTypescript className="text-3xl md:text-5xl" />,
+                <RiTailwindCssFill className="text-3xl md:text-5xl" />,
             ]
         }
     ]
     
     return (
 
-        <section className="flex flex-col gap-10 md:gap-16 items-center w-full h-max min-h-fit relative mb-12 px-4" id="projects-section">
+        <section className="flex flex-col gap-10 md:gap-16 items-center w-full h-max min-h-screen relative mb-12 px-4" id="projects-section">
             {children}
             <GradientOrbs />
 
             <h1 className="text-mobile-h1 md:text-desktop-h1 font-h1-ff mt-20 md:mt-30 relative text-center">My Projects</h1>
 
-            <div className="projects-container w-full min-h-fit relative px-4">
+            <div className="w-full min-h-fit relative px-4 flex flex-wrap justify-center gap-4 lg:gap-8 items-stretch">
                 {projects.map((project) => { 
                     return (
                         <ProjectCard
                             key={project.key}
                             title={project.title}
                             image={project.image}
+                            description={project.description}
                             link={project.link}
                             skills={project.skills}
-                            description={project.description}
+                            openModal={openModal}
                         />
                     )
                 })}
             </div>
+
+            {isModalOpen && selectedProject && (
+                <ProjectModal
+                    image={selectedProject.image}
+                    title={selectedProject.title}
+                    description={selectedProject.description}
+                    link={selectedProject.link}
+                    skills={selectedProject.skills}
+                    closeModal={closeModal}
+                />
+            )}
 
         </section>
 

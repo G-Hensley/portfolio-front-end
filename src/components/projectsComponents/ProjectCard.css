@@ -49,6 +49,10 @@
   transform: scaleX(1);
 }
 
+.glow-text {
+  text-shadow: 0 0 5px currentColor;
+}
+
 .image-container {
   border-radius: 20px 20px 0 0;
 }
