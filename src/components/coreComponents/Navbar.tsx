@@ -143,7 +143,7 @@ export default function Navbar({
         id='nav-list'
         role='menubar'
         aria-label='Site Pages'
-        className={`nav-list absolute flex flex-col gap-12 md:border-[1.5px] border-t-0 m border-primary-magenta-700 bg-linear-300 from-charcoal/70 via-secondary-blue-500/70 to-charcoal/70
+        className={`nav-list absolute flex flex-col gap-12 md:border-[1.5px] md:border-t-0 border-primary-magenta-700 bg-linear-300 from-charcoal/70 via-secondary-blue-500/70 to-charcoal/70
                 items-center justify-center p-8 sm:py-2 sm:px-4 sm:flex-row sm:top-0 h1-ff backdrop-blur-sm
                 desktop-h1 top-24 text-mobile-lg-body sm:text-desktop-body w-full sm:w-auto 
                 text-primary-cyan-900 font-body-ff duration-600 sm:translate-0 
