@@ -11,6 +11,9 @@ import expenseTracker from "../../assets/images/expense-tracker.webp";
 import reactToDoApp from "../../assets/images/react-todo-app.webp";
 import bookmarkManager from "../../assets/images/bookmark-manager.webp";
 import quickStockInventory from "../../assets/images/quickstock.webp";
+import builtinpublic from "../../assets/images/builtinpublic.png";
+import tampertantrumlabs from "../../assets/images/tampertantrumlabs.png";
+import mindtrace from "../../assets/images/mindtrace.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faReact } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -30,6 +33,8 @@ import {
 import {
   SiMongodb,
   SiExpress,
+  SiNextdotjs, 
+  SiSupabase
 } from 'react-icons/si';
 // import { VscVscode } from 'react-icons/vsc';
 // import { IoLogoVercel, IoLogoGitlab } from 'react-icons/io5';
@@ -43,7 +48,7 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
         image: string;
         title: string;
         description: string;
-        link: string;
+        link?: string;
         skills: ReactElement[];
     } | null>(null);
 
@@ -56,7 +61,7 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
         image: string;
         title: string;
         description: string;
-        link: string;
+        link?: string;
         skills: ReactElement[];
     }) => {
         setSelectedProject(project);
@@ -66,11 +71,54 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
     const projects = [
         {
             key: uuidv4(),
+            title: "Tamper Tantrum Labs",
+            image: tampertantrumlabs,
+            link: "https://tampertantrumlabs.com/",
+            description: "Front-end website for a cybersecurity company, built with Next.js, React, TypeScript, Tailwind, React Three Fiber, and Framer Motion.",
+            skills: [
+                <SiNextdotjs className="text-3xl md:text-5xl" />,
+                <FontAwesomeIcon icon={faReact} className="text-3xl md:text-5xl" />,   
+                <BiLogoTypescript className="text-3xl md:text-5xl" />,
+                <RiTailwindCssFill className="text-3xl md:text-5xl" />,
+            ]
+        },
+        {
+            key: uuidv4(),
+            title: "MindTrace",
+            image: mindtrace,
+            description: "Full-stack MVP to log and track student behaviors with notes Built with Next.js, React, TypeScript, TailwindCSS, and Supabase.",
+            skills: [
+                <SiNextdotjs className="text-3xl md:text-5xl" />,
+                <FontAwesomeIcon icon={faReact} className="text-3xl md:text-5xl" />,   
+                <BiLogoTypescript className="text-3xl md:text-5xl" />,
+                <RiTailwindCssFill className="text-3xl md:text-5xl" />,
+                <SiSupabase className="text-3xl md:text-5xl" />,
+            ]
+        },
+        {
+            key: uuidv4(),
+            title: "BuiltInPublic",
+            image: builtinpublic,
+            link: "https://www.builtinpublic.tech/",
+            description: "Full stack social media platform built with Next.js, React, TypeScript, Tailwind, Node.js, Express, and Supabase.",
+            skills: [
+                <SiNextdotjs className="text-3xl md:text-5xl" />,
+                <FontAwesomeIcon icon={faReact} className="text-3xl md:text-5xl" />,   
+                <IoLogoNodejs className="text-3xl md:text-5xl" />,
+                <BiLogoTypescript className="text-3xl md:text-5xl" />,
+                <RiTailwindCssFill className="text-3xl md:text-5xl" />,
+                <SiExpress className="text-3xl md:text-5xl" />,
+                <SiSupabase className="text-3xl md:text-5xl" />,
+            ]
+        },
+        {
+            key: uuidv4(),
             title: "Expense Tracker",
             image: expenseTracker,
             link: "https://secure-expense-tracker-front-end.vercel.app/",
             description: "Full stack expense tracker built with Next.js, React, TypeScript, Tailwind, and MongoDB.",
             skills: [
+                <SiNextdotjs className="text-3xl md:text-5xl" />,
                 <FontAwesomeIcon icon={faReact} className="text-3xl md:text-5xl" />,   
                 <IoLogoNodejs className="text-3xl md:text-5xl" />,
                 <BiLogoTypescript className="text-3xl md:text-5xl" />,
@@ -78,6 +126,18 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
                 <SiMongodb className="text-3xl md:text-5xl" />,
                 <SiExpress className="text-3xl md:text-5xl" />,
                 <BiLogoGraphql className="text-3xl md:text-5xl" />,
+            ]
+        },
+        {
+            key: uuidv4(),
+            title: "Custom Personal Portfolio",
+            image: renaeeWebsite,
+            link: "https://brendahensley.tech",
+            description: "Custom personal front end portfolio built for my wife, to showcase her cyberseucrity skills.",
+            skills: [
+                <IoLogoHtml5 className="text-3xl md:text-5xl" />,
+                <IoLogoCss3 className="text-3xl md:text-5xl" />,
+                <BiLogoJavascript className="text-3xl md:text-5xl" />,
             ]
         },
         {
@@ -92,18 +152,6 @@ export default function ProjectsContainer( {children}: {children: React.ReactNod
                 <RiTailwindCssFill className="text-3xl md:text-5xl" />,
                 <SiExpress className="text-3xl md:text-5xl" />,
                 <BiLogoPostgresql className="text-3xl md:text-5xl" />,
-            ]
-        },
-        {
-            key: uuidv4(),
-            title: "Custom Personal Portfolio",
-            image: renaeeWebsite,
-            link: "https://brendahensley.tech",
-            description: "Custom personal front end portfolio built for my wife, to showcase her cyberseucrity skills.",
-            skills: [
-                <IoLogoHtml5 className="text-3xl md:text-5xl" />,
-                <IoLogoCss3 className="text-3xl md:text-5xl" />,
-                <BiLogoJavascript className="text-3xl md:text-5xl" />,
             ]
         },
         {

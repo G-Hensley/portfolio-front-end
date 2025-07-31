@@ -12,13 +12,13 @@ export default function ProjectCard({
   title: string;
   image: string;
   description: string;
-  link: string;
+  link?: string;
   skills: ReactElement[];
   openModal: (project: {
     image: string;
     title: string;
     description: string;
-    link: string;
+    link?: string;
     skills: ReactElement[];
   }) => void;
 }) {
